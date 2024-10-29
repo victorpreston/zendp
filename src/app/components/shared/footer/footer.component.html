@@ -1,1 +1,107 @@
-<p>footer works!</p>
+<footer class="bg-green-800 py-12 relative">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-white">
+    
+    <!-- Left Section: Logo and Description -->
+    <div>
+      <div class="flex items-center mb-4">
+        <!-- Logo with double circles -->
+        <div class="relative">
+          <div class="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center">
+            <div class="p-2 rounded-full bg-white">
+              <img src="assets/footer/z.svg" alt="Logo" class="h-6 w-6 rounded-full object-cover" />
+            </div>
+          </div>
+        </div>
+        <div class="ml-3">
+          <h1 class="text-white text-lg font-bold">ZendP</h1>
+          <p class="text-white text-sm font-medium">Your trusted money transfer partner</p>
+        </div>
+      </div>
+      <p class="text-gray-200 text-base">
+          Secure and reliable international money transfer services, connecting you with loved ones worldwide.
+      </p>
+      <!-- Social Media Links -->
+      <div class="flex space-x-4 mt-4">
+        <a href="#" class="text-white hover:text-gray-200"><i class="pi pi-facebook"></i></a>
+        <a href="#" class="text-white hover:text-gray-200"><i class="pi pi-twitter"></i></a>
+        <a href="#" class="text-white hover:text-gray-200"><i class="pi pi-instagram"></i></a>
+        <a href="#" class="text-white hover:text-gray-200"><i class="pi pi-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Services Links -->
+    <div>
+      <h2 class="text-lg font-semibold text-white border-b-2 border-white mb-4">Services</h2>
+      <ul class="space-y-2 text-lg">
+        <li class="flex items-center">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+          <a routerLink="/send-money" class="text-gray-200 hover:text-white transition duration-300">Terms & Conditions</a>
+        </li>
+        <li class="flex items-center">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+          <a routerLink="/track-transfer" class="text-gray-200 hover:text-white transition duration-300">Support</a>
+        </li>
+        <li class="flex items-center">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+          <a routerLink="/fees" class="text-gray-200 hover:text-white transition duration-300">Privacy Policy</a>
+        </li>
+        <li class="flex items-center">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+          <a routerLink="/login" class="text-gray-200 hover:text-white transition duration-300">Careers</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h2 class="text-lg font-semibold text-white border-b-2 border-white mb-4">Quick Links</h2>
+      <ul class="space-y-2 text-lg">
+        <li class="flex items-center">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+          <a routerLink="/footer" class="text-gray-200 hover:text-white transition duration-300">Countries</a>
+        </li>
+        <li class="flex items-center">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+          <a routerLink="/about" class="text-gray-200 hover:text-white transition duration-300">About Us</a>
+        </li>
+        <li class="flex items-center">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+          <a routerLink="/faq" class="text-gray-200 hover:text-white transition duration-300">FAQ</a>
+        </li>
+        <li class="flex items-center">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+          <a routerLink="/contact-us" class="text-gray-200 hover:text-white transition duration-300">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact Information -->
+<div>
+    <h2 class="text-lg font-semibold text-white border-b-2 border-white mb-4">Contact Us</h2>
+    <ul class="space-y-4 text-lg">
+      <li class="flex items-center">
+        <img src="assets/footer/contact.svg" alt="Phone" class="h-8 w-8 mr-3">
+        <span class="text-gray-200">+1 (555) 123-4567</span>
+      </li>
+      <li class="flex items-center">
+        <img src="assets/footer/email.svg" alt="Email" class="h-8 w-8 mr-3">
+        <span class="text-gray-200">support&#64;zendp.com</span>
+      </li>
+      <li class="flex items-center">
+        <img src="assets/footer/location.svg" alt="Location" class="h-8 w-8 mr-3">
+        <span class="text-gray-200">1234 Elm Street, Cityville, CA 91000, USA</span>
+      </li>
+    </ul>
+  </div>
+
+  </div>
+
+  <!-- Back to Top Button -->
+  <button 
+    class="fixed right-6 bottom-20 bg-white text-green-700 w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-200 transition duration-300"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+  >
+    <img src="assets/footer/chevron-up.svg" alt="Back to Top" class="h-6 w-6 object-cover bounce" />
+  </button>
+
+</footer>
