@@ -1,0 +1,26 @@
+.home-container {
+  background: linear-gradient(to bottom right, #e6f4ea, #c8e6cf);
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005f4f;
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}

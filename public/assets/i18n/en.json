@@ -1,0 +1,33 @@
+{
+  "NAVBAR": {
+    "CAREERS": "Careers",
+    "FAQS": "FAQs",
+    "COUNTRIES": "Countries",
+    "CONTACT_US": "Contact us",
+    "ABOUT_US": "About us"
+  },
+  "FOOTER": {
+    "SERVICES_TITLE": "Services",
+    "QUICK_LINKS_TITLE": "Quick Links",
+    "CONTACT_TITLE": "Contact Us",
+    "TRUSTED_PARTNER": "Your trusted money transfer partner",
+    "DESCRIPTION": "Secure and reliable international money transfer services, connecting you with loved ones worldwide.",
+    "SERVICES": {
+      "TERMS": "Terms & Conditions",
+      "SUPPORT": "Support",
+      "PRIVACY_POLICY": "Privacy Policy",
+      "CAREERS": "Careers"
+    },
+    "QUICK_LINKS": {
+      "COUNTRIES": "Countries",
+      "ABOUT_US": "About Us",
+      "FAQ": "FAQ",
+      "CONTACT_US": "Contact Us"
+    },
+    "CONTACT": {
+      "PHONE": "+1 (555) 123-4567",
+      "EMAIL": "support@zendp.com",
+      "ADDRESS": "1234 Elm Street, Cityville, CA 91000, USA"
+    }
+  }
+}

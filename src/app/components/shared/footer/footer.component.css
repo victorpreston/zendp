@@ -1,13 +1,11 @@
-/* footer.component.css */
 
 :host {
   display: block;
   width: 100%;
 }
 
-/* Darker green background */
 .bg-green-800 {
-  background-color: #007F4F; /* Darker green */
+  background-color: #007F4F;
 }
 
 .text-gray-200 {
@@ -18,7 +16,6 @@
   color: #FFFFFF;
 }
 
-/* Larger font for headings and links */
 h2 {
   color: white;
   font-weight: bold;
@@ -26,7 +23,7 @@ h2 {
 
 a {
   color: #FFFFFF;
-  font-size: 1.125rem; /* Larger text for links */
+  font-size: 1.125rem;
   transition: color 0.3s ease;
 }
 
@@ -34,7 +31,6 @@ a:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* Increase chevron size */
 .flex .items-center img {
   filter: brightness(0) invert(1);
   width: 1.25rem;
@@ -45,7 +41,6 @@ a:hover {
   font-size: 1.5rem;
 }
 
-/* Back to Top Button styling */
 button {
   background-color: #FFFFFF;
   color: #00BF6D;
@@ -56,13 +51,13 @@ button:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-/* Responsive styling for mobile view */
+
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr; /* Stack columns vertically */
+    grid-template-columns: 1fr;
   }
 
   h2, a {
-    font-size: 1rem; /* Slightly smaller text for mobile */
+    font-size: 1rem;
   }
 }

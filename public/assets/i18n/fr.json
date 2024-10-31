@@ -1,0 +1,33 @@
+{
+  "NAVBAR": {
+    "CAREERS": "Carrières",
+    "FAQS": "FAQs",
+    "COUNTRIES": "Pays",
+    "CONTACT_US": "Nous contacter",
+    "ABOUT_US": "À propos de nous"
+  },
+  "FOOTER": {
+    "SERVICES_TITLE": "Services",
+    "QUICK_LINKS_TITLE": "Liens rapides",
+    "CONTACT_TITLE": "Contactez-nous",
+    "TRUSTED_PARTNER": "Votre partenaire de transfert d'argent de confiance",
+    "DESCRIPTION": "Services de transfert d'argent international sécurisés et fiables, vous connectant avec vos proches dans le monde entier.",
+    "SERVICES": {
+      "TERMS": "Conditions générales",
+      "SUPPORT": "Support",
+      "PRIVACY_POLICY": "Politique de confidentialité",
+      "CAREERS": "Carrières"
+    },
+    "QUICK_LINKS": {
+      "COUNTRIES": "Pays",
+      "ABOUT_US": "À propos",
+      "FAQ": "FAQ",
+      "CONTACT_US": "Nous contacter"
+    },
+    "CONTACT": {
+      "PHONE": "+1 (555) 123-4567",
+      "EMAIL": "support@zendp.com",
+      "ADDRESS": "1234 Rue Elm, Ville, CA 91000, USA"
+    }
+  }
+}

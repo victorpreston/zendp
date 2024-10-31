@@ -2,6 +2,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 interface Language {
   code: string;
@@ -12,7 +13,7 @@ interface Language {
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive],
+  imports: [CommonModule, RouterLink, RouterLinkActive, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
@@ -25,12 +26,17 @@ export class NavbarComponent {
     { code: 'fr', name: 'Français', flag: 'assets/navbar/fr.svg' }
   ];
 
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('en');
+  }
+
   toggleDropdown(): void {
     this.isDropdownOpen = !this.isDropdownOpen;
   }
 
   selectLanguage(lang: Language): void {
     this.currentLanguage = lang;
+    this.translate.use(lang.code);
     this.isDropdownOpen = false;
   }
 
