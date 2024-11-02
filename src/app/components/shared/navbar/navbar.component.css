@@ -30,7 +30,7 @@
 }
 
 .nav-link {
-  color: #00BF6D;
+  color: #1d7951;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -73,8 +73,8 @@
     display: flex;
     align-items: center;
     padding: 0.5rem 1rem;
-    border: 2px solid #00BF6D;
-    color: #00BF6D;
+    border: 2px solid #1d7951;
+    color: #1d7951;
     border-radius: 8px;
     font-weight: bold;
     font-size: 1rem;
