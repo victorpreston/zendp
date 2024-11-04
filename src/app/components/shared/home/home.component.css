@@ -15,9 +15,9 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+/* button:hover {
   background-color: #005f4f;
-}
+} */
 
 .fixed-button {
   position: fixed;
@@ -98,3 +98,43 @@ button:hover {
 .country-card:hover {
   transform: translateY(-4px);
 }
+
+
+
+.bg-green-100 {
+  background-color: #f0fdf4;
+}
+
+.text-green-900 {
+  color: #065f46;
+}
+
+.text-green-700 {
+  color: #047857;
+}
+
+.border-t-4 {
+  border-top-width: 4px;
+}
+
+.border-green-700 {
+  border-color: #047857;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.divide-y > :not(:last-child) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+
