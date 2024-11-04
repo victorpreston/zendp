@@ -29,5 +29,142 @@
       "EMAIL": "support@zendp.com",
       "ADDRESS": "1234 Rue Elm, Ville, CA 91000, USA"
     }
+  },
+  "HOME": {
+    "TITLE": "Transfert d'argent international sans faille",
+    "DESCRIPTION": "Transférez des fonds du Royaume-Uni, des États-Unis et du Canada vers des destinations en Afrique et en Amérique latine avec des taux de change compétitifs. Profitez de transferts rapides directement vers des portefeuilles mobiles sur les principaux réseaux, vous permettant d'envoyer de l'argent facilement depuis votre smartphone, à tout moment et n'importe où.",
+    "SEND": "Vous envoyez",
+    "RECEIVE": "Ils reçoivent",
+    "RECEIVE_METHOD": "Méthode de réception",
+    "FEE": "Frais",
+    "TRANSFER_TIME": "Délai de transfert",
+    "TOTAL_PAY": "Total à payer",
+    "WITHIN_TWO_DAYS": "Dans les 2 jours ouvrables",
+    "SEND_MONEY": "Envoyer de l'argent",
+    "RATING": {
+      "EXCELLENT": "Excellent",
+      "RATING_SCORE": "Note de 4.6",
+      "TRUSTPILOT": "Trustpilot"
+    },
+    "BUTTONS": {
+      "GOOGLE_PLAY": "Disponible sur Google Play",
+      "APP_STORE": "Télécharger sur l'App Store"
+    },
+    "DROPDOWN": {
+      "SELECT_METHOD": "Sélectionner la méthode",
+      "METHODS": ["Virement bancaire", "Portefeuille mobile", "Retrait en espèces"]
+    },
+    "STEPS": {
+      "SECTION_TITLE": "Transferts d'argent sans frontières",
+      "SECTION_DESCRIPTION": "Notre application facilite l'envoi d'argent à vos proches à l'étranger. Profitez de transactions rapides et sécurisées en quelques clics.",
+      "STEP_1": {
+        "TITLE": "1. Créer un compte",
+        "DESCRIPTION": "Inscrivez-vous en quelques minutes avec quelques informations."
+      },
+      "STEP_2": {
+        "TITLE": "2. Choisissez votre destinataire",
+        "DESCRIPTION": "Sélectionnez la personne à qui vous souhaitez envoyer de l'argent depuis vos contacts."
+      },
+      "STEP_3": {
+        "TITLE": "3. Entrez le montant",
+        "DESCRIPTION": "Spécifiez le montant que vous souhaitez envoyer et consultez le taux de conversion."
+      },
+      "STEP_4": {
+        "TITLE": "4. Confirmez et envoyez",
+        "DESCRIPTION": "Vérifiez les détails et envoyez l'argent instantanément."
+      },
+      "LEARN_MORE": "En savoir plus"
+    },
+    "COUNTRIES_SECTION": {
+      "TITLE": "Où pouvez-vous envoyer de l'argent avec ZendP?",
+      "DESCRIPTION": "Pays populaires",
+      "VIEW_ALL": "Voir tous les pays",
+      "COUNTRIES": {
+        "GHANA": "Ghana",
+        "NIGERIA": "Nigeria",
+        "INDIA": "India",
+        "KENYA": "Kenya",
+        "PHILIPPINES": "Philippines",
+        "ZAMBIA": "Zambia"
+      }
+    },
+    "WAYS_TO_SEND": {
+    "TITLE": "Moyens d'envoyer de l'argent à l'international",
+    "DESCRIPTION": "Le coût et la vitesse d'un transfert d'argent dépendent du pays de réception, de la méthode de réception et de la méthode de paiement. Voici quatre moyens d'envoyer de l'argent avec ZendP.",
+    "KEY_BENEFITS": {
+      "FAST_TRANSFERS": {
+        "TITLE": "Transferts rapides",
+        "DESCRIPTION": "Envoyez de l'argent instantanément avec un traitement en temps réel, garantissant que vos proches reçoivent les fonds rapidement."
+      },
+      "SECURE_PAYMENTS": {
+        "TITLE": "Paiements sécurisés",
+        "DESCRIPTION": "Notre plateforme sécurisée protège vos transactions avec un cryptage de pointe."
+      },
+      "LOW_FEES": {
+        "TITLE": "Frais bas",
+        "DESCRIPTION": "Profitez de taux compétitifs et de frais de transaction réduits, rendant les transferts internationaux abordables."
+      }
+    },
+    "LEARN_MORE_BUTTON": "En savoir plus sur nos services",
+    "CARDS": {
+      "AIRTIME_TOP_UP": {
+        "TITLE": "Recharge de crédit",
+        "DESCRIPTION": "Rechargez un crédit pour un numéro de téléphone prépayé sans frais supplémentaires."
+      },
+      "BANK_TRANSFER": {
+        "TITLE": "Virement bancaire",
+        "DESCRIPTION": "Envoyez de l'argent directement sur un compte bancaire. Vous avez juste besoin des informations de votre destinataire."
+      },
+      "CASH_PICKUP": {
+        "TITLE": "Retrait en espèces",
+        "DESCRIPTION": "Envoyez de l'argent à retirer en espèces dans l'un de nos points de retrait."
+      },
+      "MOBILE_MONEY": {
+        "TITLE": "Portefeuille mobile",
+        "DESCRIPTION": "Transfert instantané vers le compte de portefeuille mobile enregistré de votre destinataire."
+      },
+      "LEARN_MORE": "En savoir plus"
+    }
+    },
+    "FAQ_SECTION": {
+      "TITLE": "Questions fréquemment posées",
+      "DESCRIPTION": "Découvrez les questions les plus fréquemment posées par nos utilisateurs.",
+      "QUESTIONS": [
+        {
+          "QUESTION": "Combien de temps dure un transfert ?",
+          "ANSWER": "En général, les transferts prennent entre 1 et 2 jours ouvrables, mais certaines méthodes sont instantanées selon la banque et le pays de réception."
+        },
+        {
+          "QUESTION": "Quels sont les frais pour envoyer de l'argent ?",
+          "ANSWER": "Nos frais varient en fonction du montant du transfert, de la destination et du mode de paiement. Nous offrons des tarifs compétitifs pour vous assurer le meilleur rapport qualité-prix."
+        },
+        {
+          "QUESTION": "Est-il sûr d'envoyer de l'argent avec ZendP ?",
+          "ANSWER": "Oui, nous utilisons un cryptage avancé et des protocoles de sécurité pour protéger vos transactions et vos informations personnelles."
+        },
+        {
+          "QUESTION": "Puis-je suivre mon transfert ?",
+          "ANSWER": "Oui, vous pouvez suivre votre transfert en temps réel via notre application ou notre site web en saisissant votre identifiant de transaction."
+        }
+      ],
+      "VISIT_FAQ_BUTTON": "Visitez notre FAQ"
+    },
+    "REVIEWS_SECTION": {
+    "TITLE": "Découvrez ce que disent nos utilisateurs",
+    "TESTIMONIALS": [
+      {
+        "REVIEW": "Mon expérience avec ZendP a été excellente ! L'application est conviviale et rentable. Je peux facilement envoyer de l'argent à ma famille.",
+        "NAME": "Aye Joie, États-Unis"
+      },
+      {
+        "REVIEW": "ZendP est incroyable ! Le taux de change rapide et les transactions sécurisées en ont fait mon préféré. De plus, j'ai même obtenu un bonus lors de ma première transaction !",
+        "NAME": "Trang, Toronto"
+      },
+      {
+        "REVIEW": "Envoyer de l'argent n'a jamais été aussi simple ! ZendP offre de super taux, et ma famille reçoit les fonds instantanément. C'est comme être chez moi !",
+        "NAME": "Awa, Paris"
+      }
+    ]
+   }
   }
 }

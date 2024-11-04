@@ -29,5 +29,142 @@
       "EMAIL": "support@zendp.com",
       "ADDRESS": "1234 Elm Street, Cityville, CA 91000, USA"
     }
+  },
+  "HOME": {
+    "TITLE": "Seamless International Money Transfer",
+    "DESCRIPTION": "Transfer funds from the UK, US, and Canada to destinations across Africa, and Latin America with competitive exchange rates. Enjoy speedy transfers directly to mobile wallets on major networks, allowing you to send money effortlessly from your smartphone, anytime, anywhere.",
+    "SEND": "You send",
+    "RECEIVE": "They get",
+    "RECEIVE_METHOD": "Receive method",
+    "FEE": "Fee",
+    "TRANSFER_TIME": "Transfer time",
+    "TOTAL_PAY": "Total to pay",
+    "WITHIN_TWO_DAYS": "Within 2 working days",
+    "SEND_MONEY": "Send Money",
+    "RATING": {
+      "EXCELLENT": "Excellent",
+      "RATING_SCORE": "4.6 rating",
+      "TRUSTPILOT": "Trustpilot"
+    },
+    "BUTTONS": {
+      "GOOGLE_PLAY": "Get it on Google Play",
+      "APP_STORE": "Download on the App Store"
+    },
+    "DROPDOWN": {
+      "SELECT_METHOD": "Select method",
+      "METHODS": ["Bank Transfer", "Mobile Wallet", "Cash Pickup"]
+    },
+    "STEPS": {
+      "SECTION_TITLE": "Seamless Money Transfers Anytime, Anywhere",
+      "SECTION_DESCRIPTION": "Our app makes it easy to send money to your loved ones across borders. Enjoy fast, secure transactions with just a few taps.",
+      "STEP_1": {
+        "TITLE": "1. Create an Account",
+        "DESCRIPTION": "Sign up in minutes with just a few details to get started."
+      },
+      "STEP_2": {
+        "TITLE": "2. Choose Your Recipient",
+        "DESCRIPTION": "Select who you want to send money to from your contacts."
+      },
+      "STEP_3": {
+        "TITLE": "3. Enter Amount",
+        "DESCRIPTION": "Specify the amount you wish to send, and see the conversion rate."
+      },
+      "STEP_4": {
+        "TITLE": "4. Confirm and Send",
+        "DESCRIPTION": "Review the details and send the money instantly."
+      },
+      "LEARN_MORE": "Learn More"
+    },
+    "COUNTRIES_SECTION": {
+      "TITLE": "Where can you send money with ZendP?",
+      "DESCRIPTION": "Popular countries",
+      "VIEW_ALL": "View all countries",
+      "COUNTRIES": {
+        "GHANA": "Ghana",
+        "NIGERIA": "Nigeria",
+        "INDIA": "India",
+        "KENYA": "Kenya",
+        "PHILIPPINES": "Philippines",
+        "ZAMBIA": "Zambia"
+      }
+    },
+    "WAYS_TO_SEND": {
+    "TITLE": "Ways to send money internationally",
+    "DESCRIPTION": "The cost and speed of a money transfer depend on the receiving country, the receive method, and the payment method. Here are four ways to send money with ZendP.",
+    "KEY_BENEFITS": {
+      "FAST_TRANSFERS": {
+        "TITLE": "Fast Transfers",
+        "DESCRIPTION": "Send money instantly with real-time processing, ensuring your loved ones get funds quickly."
+      },
+      "SECURE_PAYMENTS": {
+        "TITLE": "Secure Payments",
+        "DESCRIPTION": "Our secure platform keeps your transactions protected with state-of-the-art encryption."
+      },
+      "LOW_FEES": {
+        "TITLE": "Low Fees",
+        "DESCRIPTION": "Enjoy competitive rates and low transaction fees, making international transfers affordable."
+      }
+    },
+    "LEARN_MORE_BUTTON": "Learn more about our services",
+    "CARDS": {
+      "AIRTIME_TOP_UP": {
+        "TITLE": "Airtime top up",
+        "DESCRIPTION": "Top up credit for a pre-paid mobile phone number with no extra fees."
+      },
+      "BANK_TRANSFER": {
+        "TITLE": "Bank transfer",
+        "DESCRIPTION": "Send money directly to a bank account. All you need are your receiver's details."
+      },
+      "CASH_PICKUP": {
+        "TITLE": "Cash pickup",
+        "DESCRIPTION": "Send money to be collected in cash at any of our pickup locations."
+      },
+      "MOBILE_MONEY": {
+        "TITLE": "Mobile money",
+        "DESCRIPTION": "Instant transfer to your receiver's registered mobile money account number."
+      },
+      "LEARN_MORE": "Learn more"
+    }
+    },
+    "FAQ_SECTION": {
+      "TITLE": "Frequently Asked Questions",
+      "DESCRIPTION": "Check out some of the most commonly asked questions by our users.",
+      "QUESTIONS": [
+        {
+          "QUESTION": "How long does a transfer take?",
+          "ANSWER": "Typically, transfers take between 1-2 business days, but some methods are instant depending on the receiving bank and country."
+        },
+        {
+          "QUESTION": "What are the fees for sending money?",
+          "ANSWER": "Our fees vary depending on the transfer amount, destination, and payment method. We offer competitive rates to ensure you get the most value."
+        },
+        {
+          "QUESTION": "Is it safe to send money with ZendP?",
+          "ANSWER": "Yes, we use advanced encryption and security protocols to keep your transactions and personal information safe and secure."
+        },
+        {
+          "QUESTION": "Can I track my transfer?",
+          "ANSWER": "Yes, you can track your transfer in real-time through our app or website by entering your transaction ID."
+        }
+      ],
+      "VISIT_FAQ_BUTTON": "Visit our FAQs"
+    },
+    "REVIEWS_SECTION": {
+    "TITLE": "See what our users are saying",
+    "TESTIMONIALS": [
+      {
+        "REVIEW": "My experience with ZendP has been excellent! The app is user-friendly and cost-effective. I can send money to my family easily.",
+        "NAME": "Aye Joie, USA"
+      },
+      {
+        "REVIEW": "ZendP is amazing! The fast exchange rate and secure transactions have made it my favorite. Plus, I even got a bonus on my first transaction!",
+        "NAME": "Trang, Toronto"
+      },
+      {
+        "REVIEW": "Sending money has never been this easy! ZendP has great rates, and my family receives funds instantly. It feels like home!",
+        "NAME": "Awa, Paris"
+      }
+    ]
+   }
   }
 }
