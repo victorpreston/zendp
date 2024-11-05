@@ -176,5 +176,16 @@
         "APP_STORE": "Download on the App Store"
       },
       "QR_CODE_NOTE": "Scan the QR code to download the app"
+  },
+  "ABOUT": {
+    "TITLE": "About Us",
+    "DESCRIPTION": "At ZendP, we are committed to making international money transfers accessible and efficient for everyone.",
+    "HERO_TITLE": "Send Money with Confidence",
+    "HERO_DESCRIPTION": "ZendP has been on a journey to ensure that sending money to loved ones is fast, affordable, and secure. Since our inception, we've dedicated ourselves to bridging financial gaps across borders.",
+    "STORY_TITLE": "Our Story",
+    "STORY_DESCRIPTION": "No hassle, no stress, no worries. ZendP was founded to disrupt traditional money transfer methods by providing a fast, digital-first solution. We represent a new era of financial inclusion and customer-centric service.",
+    "CTA_TITLE": "Join Us on Our Journey",
+    "CTA_DESCRIPTION": "Learn more about how we’re making a difference in global money transfers.",
+    "CTA_BUTTON": "Get in Touch"
   }
 }

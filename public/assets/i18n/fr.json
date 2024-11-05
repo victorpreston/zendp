@@ -175,5 +175,16 @@
       "APP_STORE": "Télécharger sur l'App Store"
     },
     "QR_CODE_NOTE": "Scannez le code QR pour télécharger l'application"
+  },
+  "ABOUT": {
+    "TITLE": "À propos de nous",
+    "DESCRIPTION": "Chez ZendP, nous nous engageons à rendre les transferts d'argent internationaux accessibles et efficaces pour tous.",
+    "HERO_TITLE": "Envoyez de l'argent en toute confiance",
+    "HERO_DESCRIPTION": "ZendP est en mission pour assurer des envois d'argent rapides, abordables et sécurisés. Depuis notre création, nous nous consacrons à combler les écarts financiers entre les frontières.",
+    "STORY_TITLE": "Notre histoire",
+    "STORY_DESCRIPTION": "Pas de tracas, pas de stress, pas de soucis. ZendP a été fondé pour bouleverser les méthodes traditionnelles de transfert d'argent en offrant une solution rapide et numérique. Nous représentons une nouvelle ère d'inclusion financière et de service client centré sur l'utilisateur.",
+    "CTA_TITLE": "Rejoignez-nous dans notre aventure",
+    "CTA_DESCRIPTION": "Découvrez comment nous faisons la différence dans les transferts d'argent internationaux.",
+    "CTA_BUTTON": "Contactez-nous"
   }
 }

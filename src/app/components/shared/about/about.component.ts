@@ -6,13 +6,13 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
 
 @Component({
-  selector: 'app-on-app',
+  selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, RouterLink, TranslateModule, RouterLinkActive, NavbarComponent, FooterComponent],
-  templateUrl: './on-app.component.html',
-  styleUrl: './on-app.component.css'
+  imports: [CommonModule, RouterLink, RouterLinkActive, TranslateModule, NavbarComponent, FooterComponent],
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.css']  // Corrected to 'styleUrls'
 })
-export class OnAppComponent {
+export class AboutComponent {
   teamMembers = [
     { name: 'Alice Johnson', position: 'CEO', image: 'assets/team/alice.jpg', bio: 'Leader and visionary with a passion for financial inclusion.' },
     { name: 'John Doe', position: 'CTO', image: 'assets/team/john.jpg', bio: 'Expert in tech-driven solutions for secure transactions.' },
