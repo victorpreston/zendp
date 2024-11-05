@@ -1,0 +1,202 @@
+<app-navbar></app-navbar>
+
+<div class="min-h-screen bg-green-100 py-16 px-4 md:px-8 flex items-center justify-center">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    
+    <!-- Left Content Section - Phone Mockups -->
+    <div class="relative flex justify-start ml-6">
+      <img src="assets/mockups/mockup-2.png" alt="Background Phone" class="absolute top-0 left-0 transform -translate-x-10 -translate-y-10 w-60 md:w-72 lg:w-80 opacity-80">
+      <img src="assets/mockups/mockup-1.png" alt="Foreground Phone" class="relative w-60 md:w-72 lg:w-80 transform -translate-x-6 translate-y-8">
+
+      <button class="absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-6 px-4 py-2 bg-white text-green-700 text-base font-semibold rounded-full flex items-center shadow-md  transition border border-green-700">
+        <img src="assets/home/regulated.png" alt="Regulated Icon" class="w-8 h-8 mr-4">
+        Regulated
+      </button>
+    </div>
+
+    <!-- Right Content Section - Title, Description, Buttons, and QR Code -->
+    <div class="space-y-8 text-center md:text-left">
+      <h2 class="text-4xl font-bold text-green-900">{{ 'ON_APP.TITLE' | translate }}</h2>
+      <p class="text-xl text-green-800">{{ 'ON_APP.DESCRIPTION' | translate }}</p>
+
+      <!-- App Store Buttons -->
+      <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+        <a href="#" class="h-16">
+          <img src="assets/home/googleplay.svg" alt="{{ 'ON_APP.BUTTONS.GOOGLE_PLAY' | translate }}" class="h-full">
+        </a>
+        <a href="#" class="h-16">
+          <img src="assets/home/appstore.svg" alt="{{ 'ON_APP.BUTTONS.APP_STORE' | translate }}" class="h-full">
+        </a>
+      </div>
+
+      <!-- QR Code Section -->
+      <div class="flex flex-col items-center md:items-start mt-4">
+        <img src="assets/home/qr-zendp.png" alt="Download QR Code" class="w-44 h-44 ml-2 justify-center">
+        <p class="text-green-800 mt-2">{{ 'ON_APP.QR_CODE_NOTE' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="bg-[#f8f7f6] py-16 px-4 md:px-8">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+
+    <!-- Left Content Section with Title, Description, and Additional Content -->
+    <div class="space-y-8">
+      <h2 class="text-4xl font-bold text-green-900 leading-tight">
+        {{ 'HOME.WAYS_TO_SEND.TITLE' | translate }}
+      </h2>
+      <p class="text-xl text-green-800">
+        {{ 'HOME.WAYS_TO_SEND.DESCRIPTION' | translate }}
+      </p>
+
+      <!-- Additional Info: Key Benefits List -->
+      <ul class="space-y-4 text-green-800">
+        <li class="flex items-start gap-4">
+          <img src="assets/home/fast.svg" alt="Fast Transfers" class="w-12 h-12">
+          <div>
+            <h3 class="text-lg font-semibold text-green-900">{{ 'HOME.WAYS_TO_SEND.KEY_BENEFITS.FAST_TRANSFERS.TITLE' | translate }}</h3>
+            <p>{{ 'HOME.WAYS_TO_SEND.KEY_BENEFITS.FAST_TRANSFERS.DESCRIPTION' | translate }}</p>
+          </div>
+        </li>
+        
+        <li class="flex items-start gap-4">
+          <img src="assets/home/security.svg" alt="Secure Payments" class="w-12 h-12">
+          <div>
+            <h3 class="text-lg font-semibold text-green-900">{{ 'HOME.WAYS_TO_SEND.KEY_BENEFITS.SECURE_PAYMENTS.TITLE' | translate }}</h3>
+            <p>{{ 'HOME.WAYS_TO_SEND.KEY_BENEFITS.SECURE_PAYMENTS.DESCRIPTION' | translate }}</p>
+          </div>
+        </li>
+        
+        <li class="flex items-start gap-4">
+          <img src="assets/home/fees.svg" alt="Low Fees" class="w-12 h-12">
+          <div>
+            <h3 class="text-lg font-semibold text-green-900">{{ 'HOME.WAYS_TO_SEND.KEY_BENEFITS.LOW_FEES.TITLE' | translate }}</h3>
+            <p>{{ 'HOME.WAYS_TO_SEND.KEY_BENEFITS.LOW_FEES.DESCRIPTION' | translate }}</p>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Additional CTA Button for More Information -->
+      <button class="text-base text-green-700 font-medium px-5 py-3 border border-green-700 rounded-md hover:bg-white hover:text-white transition">
+        {{ 'HOME.WAYS_TO_SEND.LEARN_MORE_BUTTON' | translate }}
+      </button>
+    </div>
+
+    <!-- Right Content Section - Process Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Card 1 -->
+      <div class="flex flex-col p-8 bg-green-700 text-white rounded-lg shadow-lg w-full max-w-lg">
+        <h3 class="text-2xl font-semibold mb-2">{{ 'HOME.WAYS_TO_SEND.CARDS.AIRTIME_TOP_UP.TITLE' | translate }}</h3>
+        <p class="text-base mb-6">{{ 'HOME.WAYS_TO_SEND.CARDS.AIRTIME_TOP_UP.DESCRIPTION' | translate }}</p>
+        <div class="mt-auto flex items-center justify-between w-full">
+          <button class="text-base font-medium px-5 py-3 border border-white rounded-md hover:bg-white hover:text-green-700 transition">
+            {{ 'HOME.WAYS_TO_SEND.CARDS.LEARN_MORE' | translate }}
+          </button>
+          <img src="assets/home/mobile.png" alt="Airtime Top Up" class="w-20 h-20">
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flex flex-col p-8 bg-green-700 text-white rounded-lg shadow-lg w-full max-w-lg">
+        <h3 class="text-2xl font-semibold mb-2">{{ 'HOME.WAYS_TO_SEND.CARDS.BANK_TRANSFER.TITLE' | translate }}</h3>
+        <p class="text-base mb-6">{{ 'HOME.WAYS_TO_SEND.CARDS.BANK_TRANSFER.DESCRIPTION' | translate }}</p>
+        <div class="mt-auto flex items-center justify-between w-full">
+          <button class="text-base font-medium px-5 py-3 border border-white rounded-md hover:bg-white hover:text-green-700 transition">
+            {{ 'HOME.WAYS_TO_SEND.CARDS.LEARN_MORE' | translate }}
+          </button>
+          <img src="assets/home/transfer.png" alt="Bank Transfer" class="w-20 h-20">
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flex flex-col p-8 bg-green-700 text-white rounded-lg shadow-lg w-full max-w-lg">
+        <h3 class="text-2xl font-semibold mb-2">{{ 'HOME.WAYS_TO_SEND.CARDS.CASH_PICKUP.TITLE' | translate }}</h3>
+        <p class="text-base mb-6">{{ 'HOME.WAYS_TO_SEND.CARDS.CASH_PICKUP.DESCRIPTION' | translate }}</p>
+        <div class="mt-auto flex items-center justify-between w-full">
+          <button class="text-base font-medium px-5 py-3 border border-white rounded-md hover:bg-white hover:text-green-700 transition">
+            {{ 'HOME.WAYS_TO_SEND.CARDS.LEARN_MORE' | translate }}
+          </button>
+          <img src="assets/home/cash.png" alt="Cash Pickup" class="w-20 h-20">
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="flex flex-col p-8 bg-green-700 text-white rounded-lg shadow-lg w-full max-w-lg">
+        <h3 class="text-2xl font-semibold mb-2">{{ 'HOME.WAYS_TO_SEND.CARDS.MOBILE_MONEY.TITLE' | translate }}</h3>
+        <p class="text-base mb-6">{{ 'HOME.WAYS_TO_SEND.CARDS.MOBILE_MONEY.DESCRIPTION' | translate }}</p>
+        <div class="mt-auto flex items-center justify-between w-full">
+          <button class="text-base font-medium px-5 py-3 border border-white rounded-md hover:bg-white hover:text-green-700 transition">
+            {{ 'HOME.WAYS_TO_SEND.CARDS.LEARN_MORE' | translate }}
+          </button>
+          <img src="assets/home/ewallet.png" alt="Mobile Money" class="w-20 h-20">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class=" bg-white pt-16 pb-4 px-4 md:px-8 mb-12">
+  <div class="max-w-7xl mx-auto">
+    
+    <!-- Section Title and Description -->
+    <div class="text-center mb-8">
+      <h2 class="text-3xl md:text-4xl font-semibold text-green-900 leading-tight">
+        {{ 'HOME.STEPS.SECTION_TITLE' | translate }}
+      </h2>
+      <p class="text-lg text-green-800 leading-relaxed mt-2">
+        {{ 'HOME.STEPS.SECTION_DESCRIPTION' | translate }}
+      </p>
+    </div>
+
+    <!-- Horizontal Card Layout with Larger Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+      
+      <!-- Card 1 -->
+      <div class="card p-8 bg-green-700 text-white rounded-lg shadow-md flex flex-col items-start fade-in h-64">
+        <img src="assets/home/account.svg" alt="Step 1 Icon" class="w-12 h-12 mb-4">
+        <h3 class="text-lg font-semibold mb-2">{{ 'HOME.STEPS.STEP_1.TITLE' | translate }}</h3>
+        <p class="text-sm mb-4 flex-grow">{{ 'HOME.STEPS.STEP_1.DESCRIPTION' | translate }}</p>
+        <button class="learn-more-btn text-sm font-medium border border-white text-white py-2 px-6 rounded-md hover:bg-white hover:text-green-700 transition self-end mt-auto">
+          {{ 'HOME.STEPS.LEARN_MORE' | translate }}
+        </button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card p-8 bg-green-700 text-white rounded-lg shadow-md flex flex-col items-start fade-in h-64">
+        <img src="assets/home/choose.svg" alt="Step 2 Icon" class="w-12 h-12 mb-4">
+        <h3 class="text-lg font-semibold mb-2">{{ 'HOME.STEPS.STEP_2.TITLE' | translate }}</h3>
+        <p class="text-sm mb-4 flex-grow">{{ 'HOME.STEPS.STEP_2.DESCRIPTION' | translate }}</p>
+        <button class="learn-more-btn text-sm font-medium border border-white text-white py-2 px-6 rounded-md hover:bg-white hover:text-green-700 transition self-end mt-auto">
+          {{ 'HOME.STEPS.LEARN_MORE' | translate }}
+        </button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card p-8 bg-green-700 text-white rounded-lg shadow-md flex flex-col items-start fade-in h-64">
+        <img src="assets/home/amount.svg" alt="Step 3 Icon" class="w-12 h-12 mb-4">
+        <h3 class="text-lg font-semibold mb-2">{{ 'HOME.STEPS.STEP_3.TITLE' | translate }}</h3>
+        <p class="text-sm mb-4 flex-grow">{{ 'HOME.STEPS.STEP_3.DESCRIPTION' | translate }}</p>
+        <button class="learn-more-btn text-sm font-medium border border-white text-white py-2 px-6 rounded-md hover:bg-white hover:text-green-700 transition self-end mt-auto">
+          {{ 'HOME.STEPS.LEARN_MORE' | translate }}
+        </button>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card p-8 bg-green-700 text-white rounded-lg shadow-md flex flex-col items-start fade-in h-64">
+        <img src="assets/home/send.svg" alt="Step 4 Icon" class="w-12 h-12 mb-4">
+        <h3 class="text-lg font-semibold mb-2">{{ 'HOME.STEPS.STEP_4.TITLE' | translate }}</h3>
+        <p class="text-sm mb-4 flex-grow">{{ 'HOME.STEPS.STEP_4.DESCRIPTION' | translate }}</p>
+        <button class="learn-more-btn text-sm font-medium border border-white text-white py-2 px-6 rounded-md hover:bg-white hover:text-green-700 transition self-end mt-auto">
+          {{ 'HOME.STEPS.LEARN_MORE' | translate }}
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

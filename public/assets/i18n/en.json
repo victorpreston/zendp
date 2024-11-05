@@ -165,6 +165,16 @@
         "NAME": "Awa, Paris"
       }
     ]
-   }
+    }
+  },
+  
+ "ON_APP": {
+      "TITLE": "ZendP is only available on mobile",
+      "DESCRIPTION": "Download the ZendP app from your app store and start sending money on the go.",
+      "BUTTONS": {
+        "GOOGLE_PLAY": "Get it on Google Play",
+        "APP_STORE": "Download on the App Store"
+      },
+      "QR_CODE_NOTE": "Scan the QR code to download the app"
   }
 }

@@ -166,5 +166,14 @@
       }
     ]
    }
+  },
+  "ON_APP": {
+    "TITLE": "ZendP est uniquement disponible sur mobile",
+    "DESCRIPTION": "Téléchargez l'application ZendP depuis votre boutique d'applications et commencez à envoyer de l'argent en déplacement.",
+    "BUTTONS": {
+      "GOOGLE_PLAY": "Disponible sur Google Play",
+      "APP_STORE": "Télécharger sur l'App Store"
+    },
+    "QR_CODE_NOTE": "Scannez le code QR pour télécharger l'application"
   }
 }
