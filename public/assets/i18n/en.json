@@ -187,5 +187,28 @@
     "CTA_TITLE": "Join Us on Our Journey",
     "CTA_DESCRIPTION": "Learn more about how we’re making a difference in global money transfers.",
     "CTA_BUTTON": "Get in Touch"
+  },
+  "FAQ": {
+    "SEARCH_TITLE": "Have any questions for us?",
+    "SEARCH_DESCRIPTION": "Type your question below to find answers.",
+    "SEARCH_PLACEHOLDER": "Search for an answer...",
+    "QUESTIONS": [
+      {
+        "QUESTION": "How long does a transfer take?",
+        "ANSWER": "Typically, transfers take between 1-2 business days, but some methods are instant depending on the receiving bank and country."
+      },
+      {
+        "QUESTION": "What are the fees for sending money?",
+        "ANSWER": "Our fees vary depending on the transfer amount, destination, and payment method. We offer competitive rates to ensure you get the most value."
+      },
+      {
+        "QUESTION": "Is it safe to send money with ZendP?",
+        "ANSWER": "Yes, we use advanced encryption and security protocols to keep your transactions and personal information safe and secure."
+      },
+      {
+        "QUESTION": "Can I track my transfer?",
+        "ANSWER": "Yes, you can track your transfer in real-time through our app or website by entering your transaction ID."
+      }
+    ]
   }
 }

@@ -186,5 +186,28 @@
     "CTA_TITLE": "Rejoignez-nous dans notre aventure",
     "CTA_DESCRIPTION": "Découvrez comment nous faisons la différence dans les transferts d'argent internationaux.",
     "CTA_BUTTON": "Contactez-nous"
+  },
+  "FAQ": {
+    "SEARCH_TITLE": "Vous avez une question?",
+    "SEARCH_DESCRIPTION": "Tapez votre question ci-dessous pour trouver des réponses.",
+    "SEARCH_PLACEHOLDER": "Recherchez une réponse...",
+    "QUESTIONS": [
+      {
+        "QUESTION": "Combien de temps dure un transfert?",
+        "ANSWER": "Les transferts prennent généralement entre 1 et 2 jours ouvrables, mais certaines méthodes sont instantanées en fonction de la banque et du pays récepteur."
+      },
+      {
+        "QUESTION": "Quels sont les frais d'envoi d'argent?",
+        "ANSWER": "Nos frais varient en fonction du montant du transfert, de la destination et du mode de paiement. Nous offrons des tarifs compétitifs pour vous garantir le meilleur rapport qualité-prix."
+      },
+      {
+        "QUESTION": "Est-il sûr d'envoyer de l'argent avec ZendP?",
+        "ANSWER": "Oui, nous utilisons un chiffrement avancé et des protocoles de sécurité pour protéger vos transactions et vos informations personnelles."
+      },
+      {
+        "QUESTION": "Puis-je suivre mon transfert?",
+        "ANSWER": "Oui, vous pouvez suivre votre transfert en temps réel via notre application ou notre site web en saisissant votre ID de transaction."
+      }
+    ]
   }
 }
