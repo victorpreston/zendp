@@ -189,26 +189,56 @@
     "CTA_BUTTON": "Get in Touch"
   },
   "FAQ": {
-    "SEARCH_TITLE": "Have any questions for us?",
-    "SEARCH_DESCRIPTION": "Type your question below to find answers.",
-    "SEARCH_PLACEHOLDER": "Search for an answer...",
-    "QUESTIONS": [
-      {
-        "QUESTION": "How long does a transfer take?",
-        "ANSWER": "Typically, transfers take between 1-2 business days, but some methods are instant depending on the receiving bank and country."
-      },
-      {
-        "QUESTION": "What are the fees for sending money?",
-        "ANSWER": "Our fees vary depending on the transfer amount, destination, and payment method. We offer competitive rates to ensure you get the most value."
-      },
-      {
-        "QUESTION": "Is it safe to send money with ZendP?",
-        "ANSWER": "Yes, we use advanced encryption and security protocols to keep your transactions and personal information safe and secure."
-      },
-      {
-        "QUESTION": "Can I track my transfer?",
-        "ANSWER": "Yes, you can track your transfer in real-time through our app or website by entering your transaction ID."
-      }
-    ]
+    "SEARCH_TITLE": "How can we help you?",
+    "SEARCH_DESCRIPTION": "Find answers to common questions or search by keyword to quickly access information.",
+    "SEARCH_PLACEHOLDER": "Search by keyword",
+    "POPULAR_QUESTIONS_TITLE": "Popular Questions",
+    "NEED_HELP_CARD_TITLE": "Need Help?",
+    "NEED_HELP_CARD_DESCRIPTION": "Explore our comprehensive FAQ section to find answers to common questions about ZendP's services, account management, and more.",
+    "NEED_HELP_CARD_BUTTON": "Explore FAQs",
+    "CONTACT_SUPPORT_CARD_TITLE": "Contact Support",
+    "CONTACT_SUPPORT_CARD_DESCRIPTION": "Can't find what you're looking for? Our support team is here to help you with any inquiries or issues you might have.",
+    "CONTACT_SUPPORT_CARD_BUTTON": "Contact Us",
+    "CTA_TITLE": "Start sending money with ZendP",
+    "CTA_BUTTON": "Get Started",
+    "QUESTIONS": {
+        "QUESTION_1": {
+            "QUESTION": "How long does a transfer take?",
+            "ANSWER": "Transfers typically take between 1-2 business days, but some methods may be instant."
+        },
+        "QUESTION_2": {
+            "QUESTION": "What are the fees for sending money?",
+            "ANSWER": "Fees vary based on the transfer amount, destination, and payment method."
+        },
+        "QUESTION_3": {
+            "QUESTION": "Is it safe to send money with ZendP?",
+            "ANSWER": "Yes, we use advanced encryption and security measures to keep your data secure."
+        },
+        "QUESTION_4": {
+            "QUESTION": "Can I track my transfer?",
+            "ANSWER": "Yes, you can track your transfer in real-time through our app or website."
+        },
+        "QUESTION_5": {
+            "QUESTION": "What types of payment methods are accepted?",
+            "ANSWER": "We accept various payment methods including bank transfers, debit/credit cards, and more."
+        },
+        "QUESTION_6": {
+            "QUESTION": "Can I cancel my transfer after sending it?",
+            "ANSWER": "Cancellations depend on the transfer stage. Contact support as soon as possible."
+        },
+        "QUESTION_7": {
+            "QUESTION": "How do I verify my identity?",
+            "ANSWER": "You will be guided through a verification process within our app or website."
+        },
+        "QUESTION_8": {
+            "QUESTION": "Are there limits on how much I can transfer?",
+            "ANSWER": "Yes, transfer limits vary by country and payment method."
+        },
+        "QUESTION_9": {
+            "QUESTION": "Do you offer customer support?",
+            "ANSWER": "Yes, our support team is available 24/7 to assist you."
+        }
+    }
   }
+
 }

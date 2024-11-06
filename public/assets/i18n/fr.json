@@ -188,26 +188,55 @@
     "CTA_BUTTON": "Contactez-nous"
   },
   "FAQ": {
-    "SEARCH_TITLE": "Vous avez une question?",
-    "SEARCH_DESCRIPTION": "Tapez votre question ci-dessous pour trouver des réponses.",
-    "SEARCH_PLACEHOLDER": "Recherchez une réponse...",
-    "QUESTIONS": [
-      {
-        "QUESTION": "Combien de temps dure un transfert?",
-        "ANSWER": "Les transferts prennent généralement entre 1 et 2 jours ouvrables, mais certaines méthodes sont instantanées en fonction de la banque et du pays récepteur."
-      },
-      {
-        "QUESTION": "Quels sont les frais d'envoi d'argent?",
-        "ANSWER": "Nos frais varient en fonction du montant du transfert, de la destination et du mode de paiement. Nous offrons des tarifs compétitifs pour vous garantir le meilleur rapport qualité-prix."
-      },
-      {
-        "QUESTION": "Est-il sûr d'envoyer de l'argent avec ZendP?",
-        "ANSWER": "Oui, nous utilisons un chiffrement avancé et des protocoles de sécurité pour protéger vos transactions et vos informations personnelles."
-      },
-      {
-        "QUESTION": "Puis-je suivre mon transfert?",
-        "ANSWER": "Oui, vous pouvez suivre votre transfert en temps réel via notre application ou notre site web en saisissant votre ID de transaction."
-      }
-    ]
+    "SEARCH_TITLE": "Comment pouvons-nous vous aider ?",
+    "SEARCH_DESCRIPTION": "Trouvez des réponses aux questions fréquentes ou recherchez par mot-clé pour accéder rapidement aux informations.",
+    "SEARCH_PLACEHOLDER": "Rechercher par mot-clé",
+    "POPULAR_QUESTIONS_TITLE": "Questions Populaires",
+    "NEED_HELP_CARD_TITLE": "Besoin d'aide ?",
+    "NEED_HELP_CARD_DESCRIPTION": "Explorez notre section FAQ complète pour trouver des réponses aux questions courantes concernant les services ZendP, la gestion de compte, et plus encore.",
+    "NEED_HELP_CARD_BUTTON": "Explorer les FAQs",
+    "CONTACT_SUPPORT_CARD_TITLE": "Contacter le Support",
+    "CONTACT_SUPPORT_CARD_DESCRIPTION": "Vous ne trouvez pas ce que vous cherchez ? Notre équipe de support est là pour vous aider avec toutes vos questions ou problèmes.",
+    "CONTACT_SUPPORT_CARD_BUTTON": "Contactez-nous",
+    "CTA_TITLE": "Commencez à envoyer de l'argent avec ZendP",
+    "CTA_BUTTON": "Commencer",
+    "QUESTIONS": {
+        "QUESTION_1": {
+            "QUESTION": "Combien de temps prend un transfert ?",
+            "ANSWER": "Les transferts prennent généralement entre 1 et 2 jours ouvrables, mais certaines méthodes peuvent être instantanées."
+        },
+        "QUESTION_2": {
+            "QUESTION": "Quels sont les frais pour envoyer de l'argent ?",
+            "ANSWER": "Les frais varient en fonction du montant du transfert, de la destination et de la méthode de paiement."
+        },
+        "QUESTION_3": {
+            "QUESTION": "Est-il sûr d'envoyer de l'argent avec ZendP ?",
+            "ANSWER": "Oui, nous utilisons des mesures de cryptage avancées et de sécurité pour protéger vos données."
+        },
+        "QUESTION_4": {
+            "QUESTION": "Puis-je suivre mon transfert ?",
+            "ANSWER": "Oui, vous pouvez suivre votre transfert en temps réel via notre application ou notre site web."
+        },
+        "QUESTION_5": {
+            "QUESTION": "Quels types de méthodes de paiement sont acceptés ?",
+            "ANSWER": "Nous acceptons diverses méthodes de paiement, y compris les virements bancaires, les cartes de débit/crédit, et plus encore."
+        },
+        "QUESTION_6": {
+            "QUESTION": "Puis-je annuler mon transfert après l'avoir envoyé ?",
+            "ANSWER": "Les annulations dépendent de l'étape du transfert. Contactez le support dès que possible."
+        },
+        "QUESTION_7": {
+            "QUESTION": "Comment vérifier mon identité ?",
+            "ANSWER": "Vous serez guidé à travers un processus de vérification sur notre application ou notre site web."
+        },
+        "QUESTION_8": {
+            "QUESTION": "Y a-t-il des limites sur le montant que je peux transférer ?",
+            "ANSWER": "Oui, les limites de transfert varient selon le pays et la méthode de paiement."
+        },
+        "QUESTION_9": {
+            "QUESTION": "Offrez-vous un support client ?",
+            "ANSWER": "Oui, notre équipe de support est disponible 24h/24 et 7j/7 pour vous assister."
+        }
+    }
   }
 }
