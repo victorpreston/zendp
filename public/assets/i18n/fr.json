@@ -238,5 +238,30 @@
             "ANSWER": "Oui, notre équipe de support est disponible 24h/24 et 7j/7 pour vous assister."
         }
     }
+  },
+  "CONTACT": {
+    "HERO_TITLE": "Prenez Contact",
+    "HERO_DESCRIPTION": "Nous serions ravis de vous entendre. Veuillez remplir le formulaire ci-dessous ou nous contacter directement.",
+    "CONTACT_INFO_TITLE": "Informations de Contact",
+    "CONTACT_INFO_DESCRIPTION": "Vous pouvez nous joindre via les canaux suivants",
+    "FORM_TITLE": "Envoyez-nous un Message",
+    "FORM_NAME_LABEL": "Nom Complet",
+    "FORM_NAME_PLACEHOLDER": "Entrez votre nom complet",
+    "FORM_EMAIL_LABEL": "E-mail",
+    "FORM_EMAIL_PLACEHOLDER": "Entrez votre adresse e-mail",
+    "FORM_MESSAGE_LABEL": "Message",
+    "FORM_MESSAGE_PLACEHOLDER": "Entrez votre message",
+    "FORM_SUBMIT_BUTTON": "Envoyer le Message",
+    "OFFICE_LOCATIONS_TITLE": "Nos Bureaux",
+    "OFFICE_LOCATIONS_DESCRIPTION_1": "Découvrez nos bureaux à travers le monde. Que vous ayez besoin d'assistance, d'une réunion d'affaires ou que vous souhaitiez simplement nous rendre visite, vous pouvez nous trouver aux emplacements ci-dessous.",
+    "OFFICE_LOCATIONS_DESCRIPTION_2": "Notre personnel amical est prêt à vous aider pour toutes vos demandes ou besoins de support. N'hésitez pas à nous contacter ou à nous rendre visite dans l'un de nos bureaux pour un support complet.",
+    "USA_OFFICE_TITLE": "Bureau aux États-Unis",
+    "USA_OFFICE_ADDRESS": "456 Avenue ZendP, New York, NY, USA",
+    "USA_OFFICE_PHONE": "+1 (987) 654-3210",
+    "USA_OFFICE_EMAIL": "bureauusa@zendp.com",
+    "NIGERIA_OFFICE_TITLE": "Bureau au Nigeria",
+    "NIGERIA_OFFICE_ADDRESS": "789 Route ZendP, Lagos, Nigeria",
+    "NIGERIA_OFFICE_PHONE": "+234 (123) 456-7890",
+    "NIGERIA_OFFICE_EMAIL": "bureaunigeria@zendp.com"
   }
 }

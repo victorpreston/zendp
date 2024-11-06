@@ -239,6 +239,31 @@
             "ANSWER": "Yes, our support team is available 24/7 to assist you."
         }
     }
+  },
+  "CONTACT": {
+    "HERO_TITLE": "Get in Touch",
+    "HERO_DESCRIPTION": "We'd love to hear from you. Please fill out the form below or reach out to us directly.",
+    "CONTACT_INFO_TITLE": "Contact Information",
+    "CONTACT_INFO_DESCRIPTION": "You can reach us via the following channels",
+    "FORM_TITLE": "Send Us a Message",
+    "FORM_NAME_LABEL": "Full Name",
+    "FORM_NAME_PLACEHOLDER": "Enter your full name",
+    "FORM_EMAIL_LABEL": "Email",
+    "FORM_EMAIL_PLACEHOLDER": "Enter your email address",
+    "FORM_MESSAGE_LABEL": "Message",
+    "FORM_MESSAGE_PLACEHOLDER": "Enter your message",
+    "FORM_SUBMIT_BUTTON": "Send Message",
+    "OFFICE_LOCATIONS_TITLE": "Our Office Locations",
+    "OFFICE_LOCATIONS_DESCRIPTION_1": "Explore our offices around the world. Whether you need assistance, a business meeting, or just want to visit, you can find us at the locations below.",
+    "OFFICE_LOCATIONS_DESCRIPTION_2": "Our friendly staff is ready to help with any inquiries or support you may need. Feel free to reach out or visit us at any of our global offices for comprehensive support.",
+    "USA_OFFICE_TITLE": "USA Office",
+    "USA_OFFICE_ADDRESS": "456 ZendP Avenue, New York, NY, USA",
+    "USA_OFFICE_PHONE": "+1 (987) 654-3210",
+    "USA_OFFICE_EMAIL": "usaoffice@zendp.com",
+    "NIGERIA_OFFICE_TITLE": "Nigeria Office",
+    "NIGERIA_OFFICE_ADDRESS": "789 ZendP Road, Lagos, Nigeria",
+    "NIGERIA_OFFICE_PHONE": "+234 (123) 456-7890",
+    "NIGERIA_OFFICE_EMAIL": "nigeriaoffice@zendp.com"
   }
 
 }
