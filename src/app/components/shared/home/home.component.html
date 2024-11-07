@@ -32,46 +32,81 @@
       </div>
     </div>
     
-    <!-- Exchange Rate Card with Improved Styling -->
-    <div class="max-w-lg w-full p-6 mt-10 bg-white rounded-lg shadow-lg ">
+    <!-- Exchange Rate Card with Enhanced Dropdown -->
+    <div class="max-w-lg w-full p-6 mt-10 bg-white rounded-lg shadow-lg">
       <!-- You Send Section -->
       <div class="mb-4 relative">
-        <div class="absolute -top-3 left-3 bg-green-700 px-3 py-1 rounded-sm text-sm text-white font-semibold">
-          {{ 'HOME.SEND' | translate }}
+        <div class="absolute -top-3 left-3 bg-white px-3 py-1 rounded-sm text-sm font-semibold z-10">
+          <span class="bg-green-700 text-white px-3 py-1 rounded-sm">{{ 'HOME.SEND' | translate }}</span>
         </div>
-        <div class="flex items-center justify-between mt-6 p-4 border border-green-700 rounded-lg">
-          <input type="number" value="100" class="text-2xl font-semibold text-gray-800 focus:outline-none w-32 bg-transparent">
-          <div class="flex items-center gap-2 bg-green-100 px-3 py-2 rounded-lg">
-            <img src="assets/home/us.svg" alt="USD" class="w-8 h-8 rounded-full">
-            <span class="font-medium text-gray-800">USD</span>
+        <div class="flex items-center justify-between mt-6 p-4 border border-green-700 rounded-lg relative">
+          <input type="number" [(ngModel)]="amountToSend" (input)="onAmountToSendChange()" class="text-2xl font-semibold text-gray-800 focus:outline-none w-32 bg-transparent">
+          <div class="flex items-center gap-2 bg-green-100 px-3 py-2 rounded-lg cursor-pointer" (click)="toggleCurrencyDropdown()">
+            <img [src]="'assets/flags/' + selectedSendCurrency.toLowerCase() + '.svg'" alt="Currency Flag" class="w-8 h-8 rounded-full">
+            <span class="font-medium text-gray-800">{{ selectedSendCurrency }}</span>
             <img src="assets/home/chevron.svg" alt="Chevron Down" class="w-4 h-4">
           </div>
+    
+          <!-- Currency Dropdown for Sending -->
+          <div *ngIf="isDropdownOpen" class="absolute right-0 top-16 w-72 bg-white border border-green-900 rounded-lg shadow-lg z-30">
+            <div class="p-2 border-b flex items-center justify-between">
+              <input [(ngModel)]="searchQuery" placeholder="Search" class="w-full p-2 border rounded-md focus:outline-none mr-2">
+              <button (click)="toggleCurrencyDropdown()" class="p-1 hover:bg-gray-100 rounded-full">
+                <img src="assets/navbar/close.svg" alt="Close" class="w-6 h-6 ">
+              </button>
+            </div>
+            <ul class="max-h-60 overflow-y-auto">
+              <li *ngFor="let currency of currencyList | filter:searchQuery:'country,currency'" (click)="selectCurrency(currency.currency)" class="p-3 flex items-center hover:bg-green-200 cursor-pointer">
+                <img [src]="currency.flag" alt="{{ currency.country }} Flag" class="w-6 h-6 mr-3">
+                <span class="text-sm font-medium">{{ currency.country }}</span>
+                <span class="ml-auto text-sm">{{ currency.currency }}</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <p class="text-sm text-green-700 mt-2">1 USD = 1675.555 NGN</p>
+        <p class="text-sm font-medium text-green-700 mt-2">1 {{ selectedSendCurrency }} = {{ exchangeRate | number:'1.2-2' }} {{ selectedReceiveCurrency }}</p>
       </div>
-
+    
       <!-- Divider with line and dot -->
       <div class="flex items-center mb-4">
         <div class="flex-grow border-t border-gray-300"></div>
         <div class="w-2 h-2 rounded-full bg-green-700 mx-2"></div>
         <div class="flex-grow border-t border-gray-300"></div>
       </div>
-
+    
       <!-- They Get Section -->
       <div class="mb-4 relative">
-        <div class="absolute -top-3 left-3 bg-green-700 px-3 py-1 rounded-sm text-sm text-white font-semibold">
-          {{ 'HOME.RECEIVE' | translate }}
+        <div class="absolute -top-3 left-3 bg-white px-3 py-1 rounded-sm text-sm font-semibold z-10">
+          <span class="bg-green-700 text-white px-3 py-1 rounded-sm">{{ 'HOME.RECEIVE' | translate }}</span>
         </div>
-        <div class="flex items-center justify-between mt-6 p-4 border border-green-700 rounded-lg">
-          <span class="text-2xl font-semibold text-gray-800">1675.55</span>
-          <div class="flex items-center gap-2 bg-green-100 px-3 py-2 rounded-lg">
-            <img src="assets/home/nigeria.svg" alt="NGN" class="w-8 h-8 rounded-full">
-            <span class="font-medium text-gray-800">NGN</span>
+        <div class="flex items-center justify-between mt-6 p-4 border border-green-700 rounded-lg relative">
+          <span class="text-2xl font-semibold text-gray-800">{{ amountToReceive | number:'1.2-2' }}</span>
+          <div class="flex items-center gap-2 bg-green-100 px-3 py-2 rounded-lg cursor-pointer" (click)="toggleReceiveCurrencyDropdown()">
+            <img [src]="'assets/flags/' + selectedReceiveCurrency.toLowerCase() + '.svg'" alt="Currency Flag" class="w-8 h-8 rounded-full">
+            <span class="font-medium text-gray-800">{{ selectedReceiveCurrency }}</span>
             <img src="assets/home/chevron.svg" alt="Chevron Down" class="w-4 h-4">
+          </div>
+    
+          <!-- Currency Dropdown for Receiving -->
+          <div *ngIf="isReceiveDropdownOpen" class="absolute right-0 top-16 w-72 bg-white border border-green-900 rounded-lg shadow-lg z-30">
+            <div class="p-2 border-b flex items-center justify-between">
+              <input [(ngModel)]="receiveSearchQuery" placeholder="Search" class="w-full p-2 border rounded-md focus:outline-none mr-2">
+              <button (click)="toggleReceiveCurrencyDropdown()" class="p-1 hover:bg-gray-100 rounded-full">
+                <img src="assets/navbar/close.svg" alt="Close" class="w-6 h-6">
+              </button>
+            </div>
+            <ul class="max-h-60 overflow-y-auto">
+              <li *ngFor="let currency of receiveCurrencyList | filter:receiveSearchQuery:'country,currency'" (click)="selectReceiveCurrency(currency.currency)" class="p-3 flex items-center hover:bg-green-200 cursor-pointer">
+                <img [src]="currency.flag" alt="{{ currency.country }} Flag" class="w-6 h-6 mr-3">
+                <span class="text-sm font-medium">{{ currency.country }}</span>
+                <span class="ml-auto text-sm">{{ currency.currency }}</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-
+    
+      <!-- Rest of the component remains unchanged -->
       <!-- Custom Dropdown for Receive Method Section -->
       <div class="mb-4 relative">
         <div class="absolute -top-4 left-3 bg-white px-3 py-1 rounded-md text-sm text-green-900 font-semibold z-10">{{ 'HOME.RECEIVE_METHOD' | translate }}</div>
@@ -93,12 +128,12 @@
           </div>
         </div>
       </div>
-
+    
       <!-- Fee, Transfer Time, and Total Section -->
       <div class="mb-4 text-gray-800">
         <div class="flex justify-between py-1">
           <span class="text-sm">{{ 'HOME.FEE' | translate }}</span>
-          <span class="text-sm font-semibold">0 USD</span>
+          <span class="text-sm font-semibold">0 {{ selectedSendCurrency }}</span>
         </div>
         <div class="flex justify-between py-1">
           <span class="text-sm">{{ 'HOME.TRANSFER_TIME' | translate }}</span>
@@ -106,14 +141,12 @@
         </div>
         <div class="flex justify-between py-1 border-t pt-1 mt-1">
           <span class="text-sm">{{ 'HOME.TOTAL_PAY' | translate }}</span>
-          <span class="text-sm font-semibold">100 USD</span>
+          <span class="text-sm font-semibold">{{ amountToSend | number:'1.2-2' }} {{ selectedSendCurrency }}</span>
         </div>
       </div>
-
+    
       <!-- Send Money Button -->
-      <button 
-        class="w-full py-3 mt-2 bg-green-700 hover:bg-green-800 text-white font-semibold rounded-lg transition-colors" 
-        [routerLink]="['/on-app']">
+      <button class="w-full py-3 mt-2 bg-green-700 hover:bg-green-800 text-white font-semibold rounded-lg transition-colors" [routerLink]="['/on-app']">
         {{ 'HOME.SEND_MONEY' | translate }}
       </button>
     </div>
@@ -250,7 +283,7 @@
     </div>
 
     <!-- View All Button -->
-    <button class="mt-10 px-8 py-3 border border-green-900 text-green-900 text-lg font-semibold rounded-lg hover:text-white transition">
+    <button class="mt-10 px-8 py-3 border border-green-900 text-green-900 text-lg font-semibold rounded-lg hover:text-white transition" routerLink="/countries">
       {{ 'HOME.COUNTRIES_SECTION.VIEW_ALL' | translate }}
     </button>
   </div>
