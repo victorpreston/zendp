@@ -1,37 +1,32 @@
 <app-navbar></app-navbar>
 
-<div class="min-h-screen bg-green-100 py-28 px-4 md:px-8 flex items-center justify-center">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+<div class="min-h-screen bg-green-100 py-16 px-4 md:px-6 flex items-center justify-center">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[1fr,1.2fr] gap-4 items-center">
     
     <!-- Left Content Section - Phone Mockups -->
-    <div class="relative flex justify-start ml-6">
-      <img src="assets/mockups/mockup-2.png" alt="Background Phone" class="absolute top-0 left-0 transform -translate-x-10 -translate-y-10 w-40 md:w-60 lg:w-72 opacity-80">
-      <img src="assets/mockups/mockup-1.png" alt="Foreground Phone" class="relative w-40 md:w-60 lg:w-72 transform -translate-x-6 translate-y-8">
-
-      <button class="absolute bottom-0 left-1/2 transform -translate-x-1/2 mt-6 px-4 py-2 bg-white text-green-700 text-base font-semibold rounded-full flex items-center shadow-md  transition border border-green-700">
-        <img src="assets/home/regulated.png" alt="Regulated Icon" class="w-8 h-8 mr-4">
-        Regulated
-      </button>
+    <div class="relative justify-start hidden md:flex">
+      <img src="assets/mockups/mockup-2.png" alt="Background Phone" class="absolute top-0 left-0 transform -translate-x-8 -translate-y-8 w-36 md:w-48 lg:w-56 opacity-80">
+      <img src="assets/mockups/mockup-1.png" alt="Foreground Phone" class="relative w-36 md:w-48 lg:w-56 transform -translate-x-4 translate-y-6">
     </div>
 
     <!-- Right Content Section - Title, Description, Buttons, and QR Code -->
-    <div class="space-y-8 text-center md:text-left">
-      <h2 class="text-4xl font-bold text-green-900">{{ 'ON_APP.TITLE' | translate }}</h2>
-      <p class="text-xl text-green-800">{{ 'ON_APP.DESCRIPTION' | translate }}</p>
+    <div class="space-y-4 md:space-y-6 text-center md:text-left">
+      <h2 class="text-3xl md:text-4xl font-bold text-green-900">{{ 'ON_APP.TITLE' | translate }}</h2>
+      <p class="text-lg md:text-xl text-green-800">{{ 'ON_APP.DESCRIPTION' | translate }}</p>
 
       <!-- App Store Buttons -->
-      <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-        <a href="#" class="h-16">
+      <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+        <a href="#" class="h-14 md:h-16">
           <img src="assets/home/googleplay.svg" alt="{{ 'ON_APP.BUTTONS.GOOGLE_PLAY' | translate }}" class="h-full">
         </a>
-        <a href="#" class="h-16">
+        <a href="#" class="h-14 md:h-16">
           <img src="assets/home/appstore.svg" alt="{{ 'ON_APP.BUTTONS.APP_STORE' | translate }}" class="h-full">
         </a>
       </div>
 
       <!-- QR Code Section -->
-      <div class="flex flex-col items-center md:items-start mt-4">
-        <img src="assets/home/qr-zendp.png" alt="Download QR Code" class="w-44 h-44 ml-2 justify-center">
+      <div class="flex flex-col items-center md:items-start mt-2 md:mt-4">
+        <img src="assets/home/qr-zendp.png" alt="Download QR Code" class="w-40 md:w-44 h-40 md:h-44 ml-2 justify-center">
         <p class="text-green-800 mt-2">{{ 'ON_APP.QR_CODE_NOTE' | translate }}</p>
       </div>
     </div>

@@ -90,22 +90,22 @@
   </div>
 
   <!-- Container for Buttons -->
-  <div *ngIf="!isChatVisible" class="fixed right-2 bottom-6 flex gap-4">
-    <!-- Support Button -->
-    <button 
-      class="bg-green-700 w-28 h-12 rounded-3xl flex items-center justify-center shadow-lg transition duration-300 border border-white" 
-      (click)="toggleChat()">
-      <img src="assets/footer/support.svg" alt="Support Icon" class="w-6 h-6 mr-2">
-      {{ 'CHAT.SUPPORT_BUTTON' | translate }}
-    </button>
-  
-    <!-- Back to Top Button -->
-    <button *ngIf="isBackToTopVisible" 
-      class="w-12 h-12 rounded-full border-4 border-green-700 flex items-center justify-center shadow-lg hover:bg-white transition duration-300" 
-      (click)="scrollToTop()">
-      <img src="assets/footer/up.svg" alt="Back to Top" class="h-6 w-6 object-cover bounce-up" style="filter: invert(30%) sepia(100%) saturate(5000%) hue-rotate(90deg) brightness(90%) contrast(90%);" />
-    </button>
-  </div>
+    <div *ngIf="!isChatVisible" class="fixed right-2 bottom-6 flex gap-4 z-50">
+      <!-- Support Button -->
+      <button 
+        class="bg-green-700 w-28 h-12 rounded-3xl flex items-center justify-center shadow-lg transition duration-300 border border-white" 
+        (click)="toggleChat()">
+        <img src="assets/footer/support.svg" alt="Support Icon" class="w-6 h-6 mr-2">
+        {{ 'CHAT.SUPPORT_BUTTON' | translate }}
+      </button>
+
+      <!-- Back to Top Button -->
+      <button *ngIf="isBackToTopVisible" 
+        class="w-12 h-12 rounded-full border-4 border-green-700 flex items-center justify-center shadow-lg hover:bg-white transition duration-300" 
+        (click)="scrollToTop()">
+        <img src="assets/footer/up.svg" alt="Back to Top" class="h-6 w-6 object-cover bounce-up" style="filter: invert(30%) sepia(100%) saturate(5000%) hue-rotate(90deg) brightness(90%) contrast(90%);" />
+      </button>
+    </div>
   
   <!-- Chat Card -->
   <div *ngIf="isChatVisible" class="fixed right-2 bottom-2 bg-white w-80 shadow-lg border rounded-lg">

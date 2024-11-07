@@ -1,5 +1,6 @@
 <app-navbar></app-navbar>
 
+<!-- Hero Section with Search -->
 <div class="relative py-28 px-4 md:px-8 text-white text-center bg-cover bg-center" style="background-image: url('assets/home/faq-bg.webp');">
   <!-- Gradient Overlay -->
   <div class="absolute inset-0 bg-gradient-to-r from-green-800 to-green-600 opacity-80"></div>
@@ -13,7 +14,7 @@
         <input type="text" [(ngModel)]="searchQuery" placeholder="{{ 'COUNTRIES.SEARCH_PLACEHOLDER' | translate }}"
             class="flex-grow py-4 px-12 rounded-l-sm shadow-md text-green-700 border-none focus:outline-none focus:ring-2">
         <img src="assets/home/search.svg" alt="Search" class="absolute left-2 top-1/2 transform -translate-y-1/2 w-8 h-8">
-        <button class="bg-green-900 text-white px-6 rounded-r-sm shadow-md  transition-all">
+        <button class="bg-green-900 text-white px-4 md:px-6 py-2 md:py-4 text-sm md:text-base rounded-r-sm shadow-md transition-all">
         {{ 'COUNTRIES.SEARCH_BUTTON' | translate }}
         </button>
     </div>
