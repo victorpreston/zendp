@@ -16,8 +16,9 @@ import { FilterPipe } from '../../../pipes/filter/filter.pipe';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  isDropdownOpen = false;
+  isSendDropdownOpen = false;
   isReceiveDropdownOpen = false;
+  isMethodDropdownOpen = false;
   methods = ['Bank Transfer', 'Mobile Wallet', 'Cash Pickup'];
   selectedMethod = 'Select method';
   currentSlide = 0;
@@ -28,27 +29,27 @@ export class HomeComponent {
   amountToReceive = 0;
   currencies: string[] = [];
   currencyList = [
-    { country: 'Belgium', currency: 'EUR', flag: 'assets/flags/belgium.svg' },
-    { country: 'Canada', currency: 'CAD', flag: 'assets/flags/canada.svg' },
-    { country: 'France', currency: 'EUR', flag: 'assets/flags/france.svg' },
-    { country: 'Germany', currency: 'EUR', flag: 'assets/flags/germany.svg' },
-    { country: 'Ireland', currency: 'EUR', flag: 'assets/flags/ireland.svg' },
-    { country: 'Italy', currency: 'EUR', flag: 'assets/flags/italy.svg' },
-    { country: 'Portugal', currency: 'EUR', flag: 'assets/flags/portugal.svg' },
-    { country: 'Spain', currency: 'EUR', flag: 'assets/flags/spain.svg' },
-    { country: 'United Kingdom', currency: 'GBP', flag: 'assets/flags/uk.svg' },
-    { country: 'United States', currency: 'USD', flag: 'assets/flags/us.svg' }
+    // { country: 'Belgium', currency: 'EUR', flag: 'assets/home/flags/belgium.svg' },
+    { country: 'Canada', currency: 'CAD', flag: 'assets/home/flags/cad.svg' },
+    // { country: 'France', currency: 'EUR', flag: 'assets/home/flags/france.svg' },
+    // { country: 'Germany', currency: 'EUR', flag: 'assets/home/flags/germany.svg' },
+    // { country: 'Ireland', currency: 'EUR', flag: 'assets/home/flags/ireland.svg' },
+    // { country: 'Italy', currency: 'EUR', flag: 'assets/home/flags/italy.svg' },
+    // { country: 'Portugal', currency: 'EUR', flag: 'assets/home/flags/portugal.svg' },
+    // { country: 'Spain', currency: 'EUR', flag: 'assets/home/flags/spain.svg' },
+    { country: 'United Kingdom', currency: 'GBP', flag: 'assets/home/flags/gbp.svg' },
+    { country: 'United States', currency: 'USD', flag: 'assets/home/flags/usd.svg' }
   ];
   receiveCurrencyList = [
-    { country: 'Ghana', currency: 'GHS', flag: 'assets/flags/ghana.svg' },
-    { country: 'India', currency: 'INR', flag: 'assets/flags/india.svg' },
-    { country: 'Kenya', currency: 'KES', flag: 'assets/flags/kenya.svg' },
-    { country: 'Nigeria', currency: 'NGN', flag: 'assets/flags/nigeria.svg' },
-    { country: 'Philippines', currency: 'PHP', flag: 'assets/flags/philippines.svg' },
-    { country: 'Zambia', currency: 'ZMW', flag: 'assets/flags/zambia.svg' },
-    { country: 'Cameroon', currency: 'XAF', flag: 'assets/flags/cameroon.svg' },
-    { country: 'Burundi', currency: 'BIF', flag: 'assets/flags/burundi.svg' },
-    { country: 'Tanzania', currency: 'TZS', flag: 'assets/flags/tanzania.svg' }
+    { country: 'Ghana', currency: 'GHS', flag: 'assets/home/flags/ghs.svg' },
+    { country: 'India', currency: 'INR', flag: 'assets/home/flags/inr.svg' },
+    { country: 'Kenya', currency: 'KES', flag: 'assets/home/flags/kes.svg' },
+    { country: 'Nigeria', currency: 'NGN', flag: 'assets/home/flags/ngn.svg' },
+    { country: 'Philippines', currency: 'PHP', flag: 'assets/home/flags/php.svg' },
+    { country: 'Zambia', currency: 'ZMW', flag: 'assets/home/flags/zmw.svg' },
+    { country: 'Cameroon', currency: 'XAF', flag: 'assets/home/flags/xaf.svg' },
+    { country: 'Burundi', currency: 'BIF', flag: 'assets/home/flags/bif.svg' },
+    { country: 'Tanzania', currency: 'TZS', flag: 'assets/home/flags/tzs.svg' }
   ];
   searchQuery = '';
   receiveSearchQuery = '';
@@ -75,7 +76,7 @@ export class HomeComponent {
 
   selectMethod(method: string) {
     this.selectedMethod = method;
-    this.isDropdownOpen = false;
+    this.isMethodDropdownOpen = false;
   }
 
   prevSlide() {
@@ -107,22 +108,32 @@ export class HomeComponent {
   }
 
   toggleCurrencyDropdown(): void {
-    this.isDropdownOpen = !this.isDropdownOpen;
+    this.isSendDropdownOpen = !this.isSendDropdownOpen;
+    this.isReceiveDropdownOpen = false;
+    this.isMethodDropdownOpen = false;
   }
 
   selectCurrency(currency: string): void {
     this.selectedSendCurrency = currency;
-    this.isDropdownOpen = false;
+    this.isSendDropdownOpen = false;
     this.onCurrencyChange();
   }
 
   toggleReceiveCurrencyDropdown(): void {
     this.isReceiveDropdownOpen = !this.isReceiveDropdownOpen;
+    this.isSendDropdownOpen = false;
+    this.isMethodDropdownOpen = false;
   }
 
   selectReceiveCurrency(currency: string): void {
     this.selectedReceiveCurrency = currency;
     this.isReceiveDropdownOpen = false;
     this.onCurrencyChange();
+  }
+
+  toggleMethodDropdown(): void {
+    this.isMethodDropdownOpen = !this.isMethodDropdownOpen;
+    this.isSendDropdownOpen = false;
+    this.isReceiveDropdownOpen = false;
   }
 }
