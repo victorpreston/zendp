@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -8,8 +8,22 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, RouterLink, TranslateModule],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
+  isBackToTopVisible: boolean = false;
+  isChatVisible: boolean = false;
 
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    this.isBackToTopVisible = window.scrollY > 200;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  toggleChat(): void {
+    this.isChatVisible = !this.isChatVisible;
+  }
 }

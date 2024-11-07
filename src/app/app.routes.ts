@@ -5,6 +5,7 @@ import { AboutComponent } from './components/shared/about/about.component';
 import { FaqComponent } from './components/shared/faq/faq.component';
 import { CountriesComponent } from './components/core/countries/countries.component';
 import { ContactComponent } from './components/shared/contact/contact.component';
+import { NotfoundComponent } from './components/shared/notfound/notfound.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -13,6 +14,7 @@ export const routes: Routes = [
     { path: 'about-us', component: AboutComponent },
     { path: 'faqs', component: FaqComponent},
     { path: 'countries', component: CountriesComponent },
-    { path: 'contact-us', component: ContactComponent }
+    { path: 'contact-us', component: ContactComponent },
+    { path: '**', component: NotfoundComponent}
 
 ];

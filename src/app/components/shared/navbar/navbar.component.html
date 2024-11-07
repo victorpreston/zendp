@@ -11,7 +11,7 @@
 
         <!-- Language Dropdown -->
         <div class="relative">
-          <button (click)="toggleDropdown()" class="flex items-center space-x-2 px-2 py-1 rounded-md border-2 border-green-700 text-green-700 hover:bg-green-50 transition-colors duration-200 language-toggle-btn">
+          <button (click)="toggleDropdown()" class="flex items-center space-x-2 px-2 py-1 rounded-md border border-green-700 text-green-700 hover:bg-green-50 transition-colors duration-200 language-toggle-btn">
             <img [src]="currentLanguage.flag" alt="flag" class="w-5 h-5 mr-1">
             <span class="font-medium hidden md:inline">{{ currentLanguage.name }}</span>
             <svg class="w-4 h-4 transition-transform duration-200" [ngClass]="{'rotate-180': isDropdownOpen}" fill="none" stroke="currentColor" viewBox="0 0 24 24">

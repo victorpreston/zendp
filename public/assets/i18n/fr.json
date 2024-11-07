@@ -263,5 +263,10 @@
     "NIGERIA_OFFICE_ADDRESS": "789 Route ZendP, Lagos, Nigeria",
     "NIGERIA_OFFICE_PHONE": "+234 (123) 456-7890",
     "NIGERIA_OFFICE_EMAIL": "bureaunigeria@zendp.com"
+  },
+  "NOT_FOUND": {
+    "TITLE": "Page introuvable",
+    "DESCRIPTION": "Désolé, la page que vous recherchez n'existe pas ou a été déplacée.",
+    "BUTTON": "Retour à l'accueil"
   }
 }

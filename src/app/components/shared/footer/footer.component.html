@@ -1,16 +1,8 @@
 <footer class="bg-green-900 py-12 relative">
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-white">
-    <!-- Left Section: Logo and Description -->
+    <!-- Left Section: Description -->
     <div>
-      <div class="flex items-center mb-4">
-        <div class="p-1 rounded-full bg-white">
-          <img src="assets/footer/z.svg" alt="Logo" class="h-10 w-10 rounded-full object-cover" />
-        </div>
-        <div class="ml-3">
-          <h1 class="text-white text-lg font-bold">ZendP</h1>
-          <p class="text-white text-sm font-medium">{{ 'FOOTER.TRUSTED_PARTNER' | translate }}</p>
-        </div>
-      </div>
+      <h1 class="text-white text-lg font-bold mb-4">ZendP</h1>
       <p class="text-gray-200 text-base">{{ 'FOOTER.DESCRIPTION' | translate }}</p>
       <!-- Social Media Links -->
       <div class="flex space-x-4 mt-4">
@@ -25,20 +17,20 @@
     <div>
       <h2 class="text-lg font-semibold text-white border-b-2 border-white mb-4">{{ 'FOOTER.SERVICES_TITLE' | translate }}</h2>
       <ul class="space-y-2 text-lg">
-        <li class="flex items-center">
-          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+        <li class="flex items-center group">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-6 w-6 transform group-hover:rotate-90 transition-transform duration-300">
           <a routerLink="/send-money" class="text-gray-200 hover:text-white transition duration-300">{{ 'FOOTER.SERVICES.TERMS' | translate }}</a>
         </li>
-        <li class="flex items-center">
-          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+        <li class="flex items-center group">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-6 w-6 transform group-hover:rotate-90 transition-transform duration-300">
           <a routerLink="/track-transfer" class="text-gray-200 hover:text-white transition duration-300">{{ 'FOOTER.SERVICES.SUPPORT' | translate }}</a>
         </li>
-        <li class="flex items-center">
-          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+        <li class="flex items-center group">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-6 w-6 transform group-hover:rotate-90 transition-transform duration-300">
           <a routerLink="/fees" class="text-gray-200 hover:text-white transition duration-300">{{ 'FOOTER.SERVICES.PRIVACY_POLICY' | translate }}</a>
         </li>
-        <li class="flex items-center">
-          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+        <li class="flex items-center group">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-6 w-6 transform group-hover:rotate-90 transition-transform duration-300">
           <a routerLink="/login" class="text-gray-200 hover:text-white transition duration-300">{{ 'FOOTER.SERVICES.CAREERS' | translate }}</a>
         </li>
       </ul>
@@ -48,20 +40,20 @@
     <div>
       <h2 class="text-lg font-semibold text-white border-b-2 border-white mb-4">{{ 'FOOTER.QUICK_LINKS_TITLE' | translate }}</h2>
       <ul class="space-y-2 text-lg">
-        <li class="flex items-center">
-          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+        <li class="flex items-center group">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-6 w-6 transform group-hover:rotate-90 transition-transform duration-300">
           <a routerLink="/countries" class="text-gray-200 hover:text-white transition duration-300">{{ 'FOOTER.QUICK_LINKS.COUNTRIES' | translate }}</a>
         </li>
-        <li class="flex items-center">
-          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+        <li class="flex items-center group">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-6 w-6 transform group-hover:rotate-90 transition-transform duration-300">
           <a routerLink="/about" class="text-gray-200 hover:text-white transition duration-300">{{ 'FOOTER.QUICK_LINKS.ABOUT_US' | translate }}</a>
         </li>
-        <li class="flex items-center">
-          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+        <li class="flex items-center group">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-6 w-6 transform group-hover:rotate-90 transition-transform duration-300">
           <a routerLink="/faq" class="text-gray-200 hover:text-white transition duration-300">{{ 'FOOTER.QUICK_LINKS.FAQ' | translate }}</a>
         </li>
-        <li class="flex items-center">
-          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-5 w-5">
+        <li class="flex items-center group">
+          <img src="assets/footer/chevron.svg" alt="chevron" class="mr-2 h-6 w-6 transform group-hover:rotate-90 transition-transform duration-300">
           <a routerLink="/contact-us" class="text-gray-200 hover:text-white transition duration-300">{{ 'FOOTER.QUICK_LINKS.CONTACT_US' | translate }}</a>
         </li>
       </ul>
@@ -87,8 +79,62 @@
     </div>
   </div>
 
-  <!-- Back to Top Button -->
-  <button class="fixed right-6 bottom-20 bg-green-700  w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-green-900 transition duration-300" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
-    <img src="assets/footer/chevron-up.svg" alt="Back to Top" class="h-6 w-6 object-cover bounce" />
-  </button>
+  <!-- Additional Footer Section -->
+  <div class="bg-green-900 py-4 text-center text-gray-300 mt-8">
+    
+  </div>
+
+  <!-- Full-Width Consistent Background -->
+  <div class="bg-green-900 py-2 text-center text-gray-400">
+    <p class="text-xs">© 2024 ZendP. All rights reserved. Terms & conditions apply.</p>
+  </div>
+
+  <!-- Container for Buttons -->
+    <div class="fixed right-6 bottom-20 flex gap-4">
+      <!-- Support Button -->
+      <button 
+        class="bg-green-700 w-28 h-12 rounded-3xl flex items-center justify-center shadow-lg  transition duration-300 border border-white" 
+        (click)="toggleChat()">
+        <img src="assets/footer/support.svg" alt="Support Icon" class="w-6 h-6 mr-2">
+        Support
+      </button>
+
+      <!-- Back to Top Button -->
+      <button *ngIf="isBackToTopVisible" 
+        class="w-12 h-12 rounded-full border-4 border-green-700 flex items-center justify-center shadow-lg hover:bg-white transition duration-300" 
+        (click)="scrollToTop()">
+        <img src="assets/footer/up.svg" alt="Back to Top" class="h-6 w-6 object-cover bounce-up" style="filter: invert(30%) sepia(100%) saturate(5000%) hue-rotate(90deg) brightness(90%) contrast(90%);" />
+      </button>
+    </div>
+
+
+   <!-- Chat Card -->
+    <div *ngIf="isChatVisible" class="fixed right-6 bottom-56 bg-white w-80 shadow-lg border rounded-lg">
+      <div class="bg-green-700 text-white px-4 py-2 flex justify-between items-center">
+        <h2 class="text-lg">Chat With Us</h2>
+        <button class="text-white" (click)="toggleChat()">
+          <img src="assets/footer/close.svg" alt="Close" class="w-5 h-5">
+        </button>
+      </div>
+      <div class="p-4">
+        <label class="block mb-2 text-sm font-semibold">Your name (optional)</label>
+        <input type="text" class="w-full mb-3 p-2 border rounded" placeholder="Your name">
+
+        <label class="block mb-2 text-sm font-semibold">Email address</label>
+        <input type="email" class="w-full mb-3 p-2 border rounded" placeholder="Email address">
+
+        <label class="block mb-2 text-sm font-semibold">How can we help you?</label>
+        <textarea class="w-full mb-3 p-2 border rounded" rows="4" placeholder="Type your message here"></textarea>
+
+        <label class="block mb-2 text-sm font-semibold">Attachments</label>
+        <div class="border-dashed border-2 p-2 rounded text-center mb-4">
+          <p>Add up to 5 files</p>
+        </div>
+
+        <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition flex items-center justify-center gap-2">
+          Send
+          <img src="assets/footer/send.svg" alt="Send Icon" class="w-6 h-6">
+        </button>
+      </div>
+    </div>
 </footer>
