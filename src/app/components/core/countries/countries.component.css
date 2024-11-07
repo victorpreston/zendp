@@ -8,3 +8,29 @@ input::-webkit-inner-spin-button {
 /* input[type="number"] {
   -moz-appearance: textfield;
 } */
+
+@media (max-width: 768px) {
+  .search-input {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .search-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .search-box-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-input {
+    width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+}
