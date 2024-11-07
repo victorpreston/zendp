@@ -43,29 +43,51 @@
       </div>
 
       <!-- Mobile Menu Button -->
-      <button (click)="toggleMenu()" class="md:hidden text-green-900 hover:opacity-80 focus:outline-none">
+      <button (click)="toggleMenu()" class="md:hidden text-green-700 hover:opacity-80 focus:outline-none">
         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
     </div>
-  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div *ngIf="isMenuOpen" class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40" (click)="toggleMenu()"></div>
 
   <!-- Mobile Menu Links -->
-  <div *ngIf="isMenuOpen" class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40" (click)="toggleMenu()"></div>
-  <div class="md:hidden fixed inset-y-0 left-0 w-3/4 bg-white shadow-lg p-6 transform transition-transform duration-300 ease-in-out z-50" [ngClass]="{'translate-x-0': isMenuOpen, '-translate-x-full': !isMenuOpen}">
-    <!-- Close Button -->
-    <button (click)="toggleMenu()" class="close-button">
-      <img src="assets/navbar/close.svg" alt="close">
-      Close
-    </button>
-    <a routerLink="/" routerLinkActive="text-green-900 font-bold" class="nav-link">{{ 'NAVBAR.HOME' | translate }}</a>
-    <a routerLink="/faqs" class="mb-2 nav-link text-green-900 font-bold flex items-center">
-      <img src="assets/navbar/faq.svg" alt="FAQ icon" class="w-5 h-5 mr-2">
-      {{ 'NAVBAR.FAQS' | translate }}
-    </a>
-    <a routerLink="/countries" class="block mb-2 nav-link text-green-900font-bold">{{ 'NAVBAR.COUNTRIES' | translate }}</a>
-    <a routerLink="/contact-us" class="block mb-2 nav-link text-green-900 font-bold">{{ 'NAVBAR.CONTACT_US' | translate }}</a>
-    <a routerLink="/about-us" class="block nav-link text-green-900 font-bold">{{ 'NAVBAR.ABOUT_US' | translate }}</a>
-  </div>
-</nav>
+    <div class="md:hidden fixed inset-y-0 left-0 w-3/4 bg-white shadow-lg p-6 transform transition-transform duration-300 ease-in-out z-50" [ngClass]="{'translate-x-0': isMenuOpen, '-translate-x-full': !isMenuOpen}">
+      <!-- Close Button -->
+      <button (click)="toggleMenu()" class="close-button flex justify-end mb-4">
+        <img src="assets/navbar/close.svg" alt="close">
+      </button>
+      
+      <!-- Navigation Links -->
+      <div class="mt-8 space-y-12 flex-grow">
+        <a routerLink="/" routerLinkActive="text-green-900 font-bold" class="nav-link block">{{ 'NAVBAR.HOME' | translate }}</a>
+        <a routerLink="/faqs" class="nav-link text-green-900 font-bold flex items-center">
+          <img src="assets/navbar/faq.svg" alt="FAQ icon" class="w-5 h-5 mr-2">
+          {{ 'NAVBAR.FAQS' | translate }}
+        </a>
+        <a routerLink="/countries" class="block nav-link text-green-900 font-bold">{{ 'NAVBAR.COUNTRIES' | translate }}</a>
+        <a routerLink="/contact-us" class="block nav-link text-green-900 font-bold">{{ 'NAVBAR.CONTACT_US' | translate }}</a>
+        <a routerLink="/about-us" class="block nav-link text-green-900 font-bold">{{ 'NAVBAR.ABOUT_US' | translate }}</a>
+      </div>
+
+      <!-- Divider -->
+      <div class="my-6 border-t border-gray-300"></div>
+
+      <!-- Quick Language Selector -->
+      <div class="flex justify-center mb-6">
+        <button *ngFor="let lang of languages" (click)="selectLanguage(lang)" class="px-2 py-1 mx-1 bg-green-700 text-white rounded-md hover:bg-green-800">
+          <img [src]="lang.flag" alt="{{ lang.name }} flag" class="w-5 h-5 inline-block mr-1">{{ lang.name }}
+        </button>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="flex justify-center space-x-4 mt-auto">
+        <a href="#" class="text-green-700 hover:text-green-900"><i class="pi pi-facebook text-xl"></i></a>
+        <a href="#" class="text-green-700 hover:text-green-900"><i class="pi pi-twitter text-xl"></i></a>
+        <a href="#" class="text-green-700 hover:text-green-900"><i class="pi pi-instagram text-xl"></i></a>
+        <a href="#" class="text-green-700 hover:text-green-900"><i class="pi pi-linkedin text-xl"></i></a>
+      </div>
+    </div>
+</div>

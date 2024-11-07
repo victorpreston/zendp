@@ -200,6 +200,15 @@
     "CONTACT_SUPPORT_CARD_BUTTON": "Contactez-nous",
     "CTA_TITLE": "Commencez à envoyer de l'argent avec ZendP",
     "CTA_BUTTON": "Commencer",
+    "TAGS": {
+      "INTERNATIONAL_TRANSFERS": "Transferts Internationaux",
+      "CURRENCY_EXCHANGE": "Échange de Devises",
+      "SEND_MONEY_ABROAD": "Envoyer de l'Argent à l'Étranger",
+      "MONEY_TRANSFER_FEES": "Frais de Transfert d'Argent",
+      "EXCHANGE_RATES": "Taux de Change",
+      "BANK_TRANSFERS": "Virements Bancaires",
+      "MOBILE_WALLETS": "Portefeuilles Mobiles"
+    },
     "QUESTIONS": {
         "QUESTION_1": {
             "QUESTION": "Combien de temps prend un transfert ?",
