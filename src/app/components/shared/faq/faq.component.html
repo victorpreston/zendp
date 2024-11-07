@@ -8,11 +8,14 @@
       <h1 class="text-5xl font-bold mb-4">{{ 'FAQ.SEARCH_TITLE' | translate }}</h1>
       <p class="text-xl leading-relaxed mb-8">{{ 'FAQ.SEARCH_DESCRIPTION' | translate }}</p>
 
-      <!-- Search Box -->
-      <div class="relative mx-auto md:mx-0 max-w-full md:max-w-xl mb-6">
+      <!-- Search Box with Button -->
+      <div class="relative mx-auto md:mx-0 max-w-full md:max-w-2xl mb-6 flex">
         <input type="text" [(ngModel)]="searchQuery" placeholder="{{ 'FAQ.SEARCH_PLACEHOLDER' | translate }}"
-               class="w-full py-4 px-12 rounded-sm shadow-md text-green-700 border-none focus:outline-none focus:ring-2">
+              class="flex-grow py-4 px-12 rounded-l-sm shadow-md text-green-700 border-none focus:outline-none focus:ring-2">
         <img src="assets/home/search.svg" alt="Search" class="absolute left-2 top-1/2 transform -translate-y-1/2 w-8 h-8">
+        <button class="bg-green-900 text-white px-6 rounded-r-sm shadow-md transition-all">
+          {{ 'FAQ.SEARCH_BUTTON' | translate }}
+        </button>
       </div>
 
       <!-- Tags Section -->
