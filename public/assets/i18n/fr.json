@@ -277,5 +277,36 @@
     "TITLE": "Page introuvable",
     "DESCRIPTION": "Désolé, la page que vous recherchez n'existe pas ou a été déplacée.",
     "BUTTON": "Retour à l'accueil"
+  },
+  "CHAT": {
+    "TITLE": "Chattez avec nous",
+    "NAME_LABEL": "Votre nom (optionnel)",
+    "EMAIL_LABEL": "Adresse e-mail",
+    "HELP_LABEL": "Comment pouvons-nous vous aider ?",
+    "ATTACHMENTS_LABEL": "Pièces jointes",
+    "ATTACHMENTS_NOTE": "Ajoutez jusqu'à 5 fichiers",
+    "SEND_BUTTON": "Envoyer",
+    "SUPPORT_BUTTON": "Soutien"
+  },
+  "COUNTRIES": {
+    "TITLE": "Pays Pris en Charge",
+    "DESCRIPTION": "Découvrez les pays où vous pouvez envoyer ou recevoir de l'argent grâce à nos services.",
+    "LIST_TITLE": "Liste des Pays",
+    "SEARCH_PLACEHOLDER": "Recherchez un pays ou une région...",
+    "SEARCH_BUTTON": "Search",
+    "TAGS": {
+      "AFRICA": "Afrique",
+      "ASIA": "Asie",
+      "EUROPE": "Europe",
+      "NORTH_AMERICA": "Amérique du Nord",
+      "SOUTH_AMERICA": "Amérique du Sud",
+      "OCEANIA": "Océanie"
+    }
+  },
+  "EXCHANGE": {
+    "CARD_TITLE": "Taux de Change",
+    "YOU_SEND": "Vous Envoyez",
+    "THEY_GET": "Ils Reçoivent",
+    "SEND_MONEY": "Envoyer de l'Argent"
   }
 }

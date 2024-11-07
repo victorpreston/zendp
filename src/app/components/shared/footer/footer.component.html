@@ -96,9 +96,9 @@
       class="bg-green-700 w-28 h-12 rounded-3xl flex items-center justify-center shadow-lg transition duration-300 border border-white" 
       (click)="toggleChat()">
       <img src="assets/footer/support.svg" alt="Support Icon" class="w-6 h-6 mr-2">
-      Support
+      {{ 'CHAT.SUPPORT_BUTTON' | translate }}
     </button>
-
+  
     <!-- Back to Top Button -->
     <button *ngIf="isBackToTopVisible" 
       class="w-12 h-12 rounded-full border-4 border-green-700 flex items-center justify-center shadow-lg hover:bg-white transition duration-300" 
@@ -106,32 +106,32 @@
       <img src="assets/footer/up.svg" alt="Back to Top" class="h-6 w-6 object-cover bounce-up" style="filter: invert(30%) sepia(100%) saturate(5000%) hue-rotate(90deg) brightness(90%) contrast(90%);" />
     </button>
   </div>
-
+  
   <!-- Chat Card -->
   <div *ngIf="isChatVisible" class="fixed right-2 bottom-2 bg-white w-80 shadow-lg border rounded-lg">
     <div class="bg-green-700 text-white px-4 py-2 flex justify-between items-center">
-      <h2 class="text-lg">Chat With Us</h2>
+      <h2 class="text-lg">{{ 'CHAT.TITLE' | translate }}</h2>
       <button class="text-white" (click)="toggleChat()">
         <img src="assets/footer/close.svg" alt="Close" class="w-5 h-5">
       </button>
     </div>
     <div class="p-4">
-      <label class="block mb-2 text-sm font-semibold">Your name (optional)</label>
-      <input type="text" class="w-full mb-3 p-2 border rounded" placeholder="Your name">
-
-      <label class="block mb-2 text-sm font-semibold">Email address</label>
-      <input type="email" class="w-full mb-3 p-2 border rounded" placeholder="Email address">
-
-      <label class="block mb-2 text-sm font-semibold">How can we help you?</label>
-      <textarea class="w-full mb-3 p-2 border rounded" rows="4" placeholder="Type your message here"></textarea>
-
-      <label class="block mb-2 text-sm font-semibold">Attachments</label>
+      <label class="block mb-2 text-sm font-semibold">{{ 'CHAT.NAME_LABEL' | translate }}</label>
+      <input type="text" class="w-full mb-3 p-2 border rounded" placeholder="{{ 'CHAT.NAME_LABEL' | translate }}">
+  
+      <label class="block mb-2 text-sm font-semibold">{{ 'CHAT.EMAIL_LABEL' | translate }}</label>
+      <input type="email" class="w-full mb-3 p-2 border rounded" placeholder="{{ 'CHAT.EMAIL_LABEL' | translate }}">
+  
+      <label class="block mb-2 text-sm font-semibold">{{ 'CHAT.HELP_LABEL' | translate }}</label>
+      <textarea class="w-full mb-3 p-2 border rounded" rows="4" placeholder="{{ 'CHAT.HELP_LABEL' | translate }}"></textarea>
+  
+      <label class="block mb-2 text-sm font-semibold">{{ 'CHAT.ATTACHMENTS_LABEL' | translate }}</label>
       <div class="border-dashed border-2 p-2 rounded text-center mb-4">
-        <p>Add up to 5 files</p>
+        <p>{{ 'CHAT.ATTACHMENTS_NOTE' | translate }}</p>
       </div>
-
+  
       <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800 transition flex items-center justify-center gap-2">
-        Send
+        {{ 'CHAT.SEND_BUTTON' | translate }}
         <img src="assets/footer/send.svg" alt="Send Icon" class="w-6 h-6">
       </button>
     </div>

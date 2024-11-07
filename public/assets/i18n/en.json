@@ -278,6 +278,37 @@
     "TITLE": "Page Not Found",
     "DESCRIPTION": "Sorry, the page you are looking for does not exist or has been moved.",
     "BUTTON": "Return to Home"
+  },
+  "CHAT": {
+    "TITLE": "Chat With Us",
+    "NAME_LABEL": "Your name (optional)",
+    "EMAIL_LABEL": "Email address",
+    "HELP_LABEL": "How can we help you?",
+    "ATTACHMENTS_LABEL": "Attachments",
+    "ATTACHMENTS_NOTE": "Add up to 5 files",
+    "SEND_BUTTON": "Send",
+    "SUPPORT_BUTTON": "Support"
+  },
+  "COUNTRIES": {
+    "TITLE": "Supported Countries by ZendP",
+    "DESCRIPTION": "Explore the countries where you can send or receive money with our services.",
+    "LIST_TITLE": "List of countries we support",
+    "SEARCH_BUTTON": "Search",
+    "SEARCH_PLACEHOLDER": "Search for a country or region...",
+    "TAGS": {
+      "AFRICA": "Africa",
+      "ASIA": "Asia",
+      "EUROPE": "Europe",
+      "NORTH_AMERICA": "North America",
+      "SOUTH_AMERICA": "South America",
+      "OCEANIA": "Oceania"
+    }
+  },
+  "EXCHANGE": {
+    "CARD_TITLE": "Exchange Rates",
+    "YOU_SEND": "You Send",
+    "THEY_GET": "They Get",
+    "SEND_MONEY": "Send Money"
   }
 
 }
