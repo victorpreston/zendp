@@ -1,0 +1,637 @@
+---
+const year = new Date().getFullYear();
+---
+
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Links of CSS files -->
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/aos.css">
+        <link rel="stylesheet" href="/assets/css/animate.min.css">
+        <link rel="stylesheet" href="/assets/css/meanmenu.min.css">
+        <link rel="stylesheet" href="/assets/css/remixicon.css">
+        <link rel="stylesheet" href="/assets/css/flaticon.css">
+        <link rel="stylesheet" href="/assets/css/odometer.min.css">
+        <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/navbar.css">
+        <link rel="stylesheet" href="/assets/css/footer.css">
+        <link rel="stylesheet" href="/assets/css/dark.css">
+		<link rel="stylesheet" href="/assets/css/responsive.css">
+		
+        <!--=== Title & Favicon ===-->
+		<title>ZendP - Seamless International Money Transfer</title>
+        <link rel="icon" type="image/png" href="assets/images/zendp.png">
+
+        <style>
+            /* Logo Sizing Constraints */
+            .navbar-brand img,
+            .main-responsive-menu .logo img {
+                max-height: 45px;
+                width: auto;
+                object-fit: contain;
+            }
+            
+            /* Mobile logo constraints */
+            @media only screen and (max-width: 1199px) {
+                .main-responsive-menu .logo img {
+                    max-height: 35px;
+                }
+            }
+            
+            /* Language Selector & Navbar List Styles */
+            .navbar-list {
+                display: flex;
+                align-items: center;
+                gap: 0;
+            }
+            
+            .navbar-list ul {
+                display: flex;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                gap: 25px;
+            }
+            
+            .navbar-list ul li {
+                display: flex;
+                align-items: center;
+            }
+            
+            .navbar-list ul li a {
+                color: var(--black-color);
+                font-size: 14px;
+                font-weight: 500;
+                transition: var(--transition);
+                text-decoration: none;
+            }
+            
+            .navbar-list ul li a:hover {
+                color: var(--main-color);
+            }
+            
+            .language-selector .dropdown-toggle {
+                background: none;
+                border: none;
+                color: var(--black-color);
+                font-size: 14px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                padding: 0;
+                transition: var(--transition);
+                outline: none;
+                box-shadow: none;
+            }
+            
+            .language-selector .dropdown-toggle:hover,
+            .language-selector .dropdown-toggle:focus {
+                color: var(--main-color);
+                box-shadow: none;
+                outline: none;
+            }
+            
+            .language-selector .dropdown-toggle img {
+                width: 18px;
+                height: 13px;
+                border-radius: 2px;
+                object-fit: cover;
+            }
+            
+            /* Bootstrap adds chevron automatically via ::after pseudo-element */
+            .language-selector .dropdown-toggle::after {
+                font-size: 12px;
+                margin-left: 2px;
+                border-top-color: currentColor;
+            }
+            
+            .language-selector .dropdown-menu {
+                min-width: 140px;
+                padding: 8px 0;
+                border: 1px solid #e9ecef;
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+                border-radius: 6px;
+            }
+            
+            .language-selector .dropdown-item {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 8px 16px;
+                font-size: 14px;
+                font-weight: 400;
+                transition: var(--transition);
+                border: none;
+                background: none;
+                color: var(--black-color);
+            }
+            
+            .language-selector .dropdown-item img {
+                width: 18px;
+                height: 13px;
+                border-radius: 2px;
+                object-fit: cover;
+            }
+            
+            .language-selector .dropdown-item:hover,
+            .language-selector .dropdown-item:focus {
+                background-color: rgba(16, 185, 129, 0.1);
+                color: var(--main-color);
+                outline: none;
+            }
+            
+            .language-selector .dropdown-item.active {
+                background-color: rgba(16, 185, 129, 0.1);
+                color: var(--main-color);
+                font-weight: 500;
+            }
+            
+            /* Dark theme support */
+            .theme-dark .navbar-list ul li a {
+                color: var(--white-color);
+            }
+            
+            .theme-dark .navbar-list ul li a:hover {
+                color: var(--main-color);
+            }
+            
+            .theme-dark .language-selector .dropdown-toggle {
+                color: var(--white-color);
+            }
+            
+            .theme-dark .language-selector .dropdown-toggle:hover,
+            .theme-dark .language-selector .dropdown-toggle:focus {
+                color: var(--main-color);
+            }
+            
+            .theme-dark .language-selector .dropdown-menu {
+                background-color: #1a1a1a;
+                border: 1px solid #333;
+            }
+            
+            .theme-dark .language-selector .dropdown-item {
+                color: var(--white-color);
+            }
+            
+            .theme-dark .language-selector .dropdown-item:hover,
+            .theme-dark .language-selector .dropdown-item:focus {
+                background-color: rgba(16, 185, 129, 0.2);
+                color: var(--main-color);
+            }
+            
+            .theme-dark .language-selector .dropdown-item.active {
+                background-color: rgba(16, 185, 129, 0.2);
+                color: var(--main-color);
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Start Header Area -->
+        <header class="main-header-area">
+            <!-- Start Navbar Area -->
+            <div class="navbar-area">
+                <div class="main-responsive-nav">
+                    <div class="container">
+                        <div class="main-responsive-menu">
+                            <div class="logo">
+                                <a href="/">
+                                    <img src="assets/images/zendp-logo.png" class="black-logo" alt="image">
+                                    <!-- <img src="assets/images/logo-2.png" class="white-logo" alt="image"> -->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-navbar">
+                    <div class="container-fluid">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                            <a class="navbar-brand" href="/">
+                                <img src="assets/images/zendp-logo.png" class="black-logo" alt="image">
+                                <!-- <img src="assets/images/logo-2.png" class="white-logo" alt="image"> -->
+                            </a>
+                            
+                            <div class="navbar-list">
+                                <ul>
+                                    <li class="language-selector">
+                                        <div class="dropdown">
+                                            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <img src="assets/images/language-flags/US.png" alt="English">
+                                                <span>English</span>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item active" href="#">
+                                                    <img src="assets/images/language-flags/US.png" alt="English">
+                                                    English
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="assets/images/language-flags/DE.png" alt="German">
+                                                    Deutsch
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="assets/images/language-flags/FR.png" alt="French">
+                                                    Français
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="assets/images/language-flags/ES.png" alt="Spanish">
+                                                    Español
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="/contact">Support</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a href="/" class="nav-link active">
+                                            Home 
+                                            <!-- <i class="ri-arrow-down-s-line"></i> -->
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="/about-us" class="nav-link">About Us</a>
+                                    </li>
+
+                                    <!-- <li class="nav-item">
+                                        <a href="/compare-pricing" class="nav-link">Compare Pricing</a>
+                                    </li> -->
+
+                        
+
+                                    <li class="nav-item">
+                                        <a href="/countries" class="nav-link">Countries</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="/faq" class="nav-link">FAQ</a>
+                                    </li>
+        
+                                    <li class="nav-item">
+                                        <a href="/contact" class="nav-link">Contact</a>
+                                    </li>
+                                </ul>
+
+                                <div class="others-options d-flex align-items-center">
+                                    <div class="option-item">
+                                        <a href="/coming-soon" class="default-btn">Download App</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="others-option-for-responsive">
+                    <div class="container">
+                        <div class="dot-menu">
+                            <div class="inner">
+                                <div class="circle circle-one"></div>
+                                <div class="circle circle-two"></div>
+                                <div class="circle circle-three"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="container">
+                            <div class="option-inner">
+                                <div class="others-options d-flex align-items-center">
+                                    <div class="option-item">
+                                        <a href="/coming-soon" class="default-btn">Download App</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+        </header>
+
+        <!-- Start Page Banner Area -->
+        <div class="page-banner-area">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="page-banner-content" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                            <h2>Contact Us</h2>
+        
+                            <ul>
+                                <li>
+                                    <a href="/">Home</a>
+                                </li>
+                                <li>Contact</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="">
+                            <img src="assets/images/page-banner/banner.png" alt="image">
+                            <div class="banner-shape">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Page Banner Area -->
+        
+        <!-- Start Contact Information Area -->
+        <div class="contact-information-area pt-100 pb-75">
+            <div class="container">
+                <div class="section-title">
+                    <span>Contact Information</span>
+                    <h2>We're More Than International Payments, Get In Touch</h2>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contact-information-card">
+                            <div class="icon">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <h3>Address:</h3>
+                            <p>456 ZendP Avenue, New York, NY, USA</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contact-information-card">
+                            <div class="icon">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <h3>Email Address:</h3>
+                            <p><a href="mailto:info@zendp.com">info@zendp.com</a> <br> <a href="mailto:support@zendp.com">support@zendp.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contact-information-card">
+                            <div class="icon">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <h3>Phone Number:</h3>
+                            <p><a href="tel:18005550199">+1 800-555-0199</a> <br> <a href="tel:18005550199">+1 800-555-0199</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="contact-information-card">
+                            <div class="icon">
+                                <i class="ri-printer-line"></i>
+                            </div>
+                            <h3>Fax:</h3>
+                            <p><a href="tel:18005550199">+1 800-555-0199</a> <br> <a href="tel:18005550199">+1 800-555-0199</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Contact Information Area -->
+
+        <!-- Start Contact Area -->
+        <div class="contact-area ptb-100">
+            <div class="container">
+                <div class="section-title">
+                    <span>Contact Information</span>
+                    <h2>Fill In Your Information And We'll Be In Touch As Soon As We Can</h2>
+                </div>
+
+                <form id="contactForm">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>How Did You Find Us?</label>
+
+                                <select class="form-select">
+                                    <option selected>Google</option>
+                                    <option value="1">Social Media</option>
+                                    <option value="2">YouTube</option>
+                                    <option value="3">Referral</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="form-group">
+                                <label>Your Name *</label>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Eg: Thomas Adison" required data-error="Please enter your name">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="form-group">
+                                <label>Email *</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="example@zendp.com" required data-error="Please enter your email">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="form-group">
+                                <label>Phone *</label>
+                                <input type="text" name="phone_number" id="phone_number" placeholder="Enter your phone number" required data-error="Please enter your number" class="form-control">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="form-group">
+                                <label>Subject *</label>
+                                <input type="text" name="msg_subject" id="msg_subject" placeholder="Enter your subject" class="form-control" required data-error="Please enter your subject">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Your Message</label>
+                                <textarea name="message" class="form-control" id="message" placeholder="Type your message" cols="30" rows="6" required data-error="Write your message"></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input
+                                        name="gridCheck"
+                                        value="I agree to the terms and privacy policy."
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="gridCheck"
+                                        required
+                                    >
+                            
+                                    <label class="form-check-label" for="gridCheck">
+                                        I agree to the <a href="/terms-of-service">terms</a> and <a href="/privacy-policy">privacy policy</a>
+                                    </label>
+                                    <div class="help-block with-errors gridCheck-error"></div>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="col-lg-12 col-md-12">
+                            <div class="send-btn">
+                                <button type="submit" class="default-btn">Submit Now</button>
+                            </div>
+                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- End Contact Area -->
+
+        <!-- Start Overview Area -->
+        <div class="overview-area ptb-100">
+            <div class="container">
+                <div class="overview-content" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                    <span>Connect Us</span>
+                    <h3>Sending International Business Payments or Sending Money To Family Overseas? At ZendP, we are your fast and simple solution</h3>
+
+                </div>
+            </div>
+
+            <div class="overview-shape">
+                <img src="assets/images/overview/shape-1.png" alt="image">
+            </div>
+            <div class="overview-shape-2">
+                <!-- <img src="assets/images/overview/shape-2.png" alt="image"> -->
+            </div>
+        </div>
+        <!-- End Overview Area -->
+
+        <!-- End Footer Area -->
+        <footer class="footer-area pt-100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                            <div class="widget-logo">
+                                <img src="/assets/images/zendp-logo.png" class="black-logo" alt="image">
+                            </div>
+                            <p>To get exclusive updates and benefits.</p>
+                            
+                            <form class="newsletter-form" data-bs-toggle="validator">
+                                <input type="email" class="input-newsletter" placeholder="Enter email" name="EMAIL" required autocomplete="off">
+        
+                                <button type="submit" class="default-btn">Subscribe</button>
+                                <div id="validator-newsletter" class="form-result"></div>
+                            </form>
+
+                            <ul class="widget-social">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class="ri-facebook-fill"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/?lang=en" target="_blank">
+                                        <i class="ri-twitter-fill"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class="ri-instagram-line"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/signup" target="_blank">
+                                        <i class="ri-linkedin-line"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+                            <h3>Company And Team</h3>
+
+                            <ul class="quick-links">
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/help-center">Help Center</a></li>
+                                <li><a href="/about-us">About Us</a></li>
+                                <!-- <li><a href="/help-center">Affiliates And Partnerships</a></li> -->
+                                <li><a href="/about-us"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                            <h3>Resources</h3>
+
+                            <ul class="quick-links">
+                                <!-- <li><a href="/help-center">Security</a></li> -->
+                                <li><a href="/faq">FAQ's</a></li>
+                                <li><a href="/help-center">Community</a></li>
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                            <h3>Contact Info</h3>
+
+                            <ul class="info-links">
+                                <!-- <li><span>Location:</span> 456 ZendP Avenue, New York, NY, USA</li> -->
+                                <li><span>Email:</span> <a href="mailto:info@zendp.com">info@zendp.com</a></li>
+                                <li><span>Phone:</span> <a href="tel:44789289524329">+1 800-555-0199	</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="copyright-area-content">
+                        <p>
+                            Copyright @{year} ZendP All Rights Reserved by
+                            <a href="https://zendp.com/" target="_blank">
+                                zendp.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+
+        <!-- Start Go Top Area -->
+        <div class="go-top">
+            <i class="ri-arrow-up-s-line"></i>
+        </div>
+        <!-- End Go Top Area -->
+        
+        <!-- Links of JS files -->
+        <script is:inline src="/assets/js/jquery.min.js"></script>
+        <script is:inline src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script is:inline src="/assets/js/jquery.meanmenu.js"></script> 
+        <script is:inline src="/assets/js/owl.carousel.min.js"></script>
+        <script is:inline src="/assets/js/jquery.appear.js"></script>
+        <script is:inline src="/assets/js/odometer.min.js"></script>
+        <script is:inline src="/assets/js/jquery.magnific-popup.min.js"></script>
+        <script is:inline src="/assets/js/TweenMax.min.js"></script>
+        <script is:inline src="/assets/js/ScrollMagic.min.js"></script>
+        <script is:inline src="/assets/js/aos.js"></script>
+		<script is:inline src="/assets/js/jquery.ajaxchimp.min.js"></script>
+		<script is:inline src="/assets/js/form-validator.min.js"></script>
+        <script is:inline src="/assets/js/contact-form-script.js"></script>
+        <script is:inline src="/assets/js/wow.min.js"></script>
+        <script is:inline src="/assets/js/main.js"></script>
+    </body>
+</html>

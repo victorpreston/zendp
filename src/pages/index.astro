@@ -1,0 +1,1748 @@
+---
+const year = new Date().getFullYear();
+---
+
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Links of CSS files -->
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/aos.css">
+        <link rel="stylesheet" href="/assets/css/animate.min.css">
+        <link rel="stylesheet" href="/assets/css/meanmenu.min.css">
+        <link rel="stylesheet" href="/assets/css/remixicon.css">
+        <link rel="stylesheet" href="/assets/css/flaticon.css">
+        <link rel="stylesheet" href="/assets/css/odometer.min.css">
+        <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/navbar.css">
+        <link rel="stylesheet" href="/assets/css/footer.css">
+        <link rel="stylesheet" href="/assets/css/dark.css">
+		<link rel="stylesheet" href="/assets/css/responsive.css">
+		
+        <!--=== Title & Favicon ===-->
+		<title>ZendP - Seamless International Money Transfer</title>
+        <link rel="icon" type="image/png" href="/assets/images/zendp.png">
+
+        <style>
+            /* Logo Sizing Constraints */
+            .navbar-brand img,
+            .main-responsive-menu .logo img {
+                max-height: 45px;
+                width: auto;
+                object-fit: contain;
+            }
+            
+            /* Mobile logo constraints */
+            @media only screen and (max-width: 1199px) {
+                .main-responsive-menu .logo img {
+                    max-height: 35px;
+                }
+            }
+            
+            /* Language Selector & Navbar List Styles */
+            .navbar-list {
+                display: flex;
+                align-items: center;
+                gap: 0;
+            }
+            
+            .navbar-list ul {
+                display: flex;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                gap: 25px;
+            }
+            
+            .navbar-list ul li {
+                display: flex;
+                align-items: center;
+            }
+            
+            .navbar-list ul li a {
+                color: var(--black-color);
+                font-size: 14px;
+                font-weight: 500;
+                transition: var(--transition);
+                text-decoration: none;
+            }
+            
+            .navbar-list ul li a:hover {
+                color: var(--main-color);
+            }
+            
+            .language-selector .dropdown-toggle {
+                background: none;
+                border: none;
+                color: var(--black-color);
+                font-size: 14px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                padding: 0;
+                transition: var(--transition);
+                outline: none;
+                box-shadow: none;
+            }
+            
+            .language-selector .dropdown-toggle:hover,
+            .language-selector .dropdown-toggle:focus {
+                color: var(--main-color);
+                box-shadow: none;
+                outline: none;
+            }
+            
+            .language-selector .dropdown-toggle img {
+                width: 18px;
+                height: 13px;
+                border-radius: 2px;
+                object-fit: cover;
+            }
+            
+            /* Bootstrap adds chevron automatically via ::after pseudo-element */
+            .language-selector .dropdown-toggle::after {
+                font-size: 12px;
+                margin-left: 2px;
+                border-top-color: currentColor;
+            }
+            
+            .language-selector .dropdown-menu {
+                min-width: 140px;
+                padding: 8px 0;
+                border: 1px solid #e9ecef;
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+                border-radius: 6px;
+            }
+            
+            .language-selector .dropdown-item {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 8px 16px;
+                font-size: 14px;
+                font-weight: 400;
+                transition: var(--transition);
+                border: none;
+                background: none;
+                color: var(--black-color);
+            }
+            
+            .language-selector .dropdown-item img {
+                width: 18px;
+                height: 13px;
+                border-radius: 2px;
+                object-fit: cover;
+            }
+            
+            .language-selector .dropdown-item:hover,
+            .language-selector .dropdown-item:focus {
+                background-color: rgba(16, 185, 129, 0.1);
+                color: var(--main-color);
+                outline: none;
+            }
+            
+            .language-selector .dropdown-item.active {
+                background-color: rgba(16, 185, 129, 0.1);
+                color: var(--main-color);
+                font-weight: 500;
+            }
+            
+            /* Dark theme support */
+            .theme-dark .navbar-list ul li a {
+                color: var(--white-color);
+            }
+            
+            .theme-dark .navbar-list ul li a:hover {
+                color: var(--main-color);
+            }
+            
+            .theme-dark .language-selector .dropdown-toggle {
+                color: var(--white-color);
+            }
+            
+            .theme-dark .language-selector .dropdown-toggle:hover,
+            .theme-dark .language-selector .dropdown-toggle:focus {
+                color: var(--main-color);
+            }
+            
+            .theme-dark .language-selector .dropdown-menu {
+                background-color: #1a1a1a;
+                border: 1px solid #333;
+            }
+            
+            .theme-dark .language-selector .dropdown-item {
+                color: var(--white-color);
+            }
+            
+            .theme-dark .language-selector .dropdown-item:hover,
+            .theme-dark .language-selector .dropdown-item:focus {
+                background-color: rgba(16, 185, 129, 0.2);
+                color: var(--main-color);
+            }
+            
+            .theme-dark .language-selector .dropdown-item.active {
+                background-color: rgba(16, 185, 129, 0.2);
+                color: var(--main-color);
+            }
+
+            /* Fix main banner spacing - reduce excessive top padding */
+            .main-banner-area {
+                padding-top: 50px !important;  /* Reduced from 200px */
+                padding-bottom: 80px !important;  /* Optional: slightly reduced */
+            }
+
+            /* Also fix responsive versions */
+            @media only screen and (min-width: 768px) and (max-width: 991px) {
+                .main-banner-area {
+                    padding-top: 50px !important;  /* Reduced from 200px */
+                    padding-bottom: 40px !important;
+                }
+            }
+
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                .main-banner-area {
+                    padding-top: 50px !important;  /* Reduced from 175px */
+                    padding-bottom: 45px !important;
+                }
+            }
+
+        .money-transfer-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            margin-top: 20px;
+            padding: 32px;
+            border-radius: 6.5px;
+            position: relative;
+        }
+        
+        /* Top fading box shadow */
+        .money-transfer-form::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 5%;
+            right: 5%;
+            height: 20px;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .form-group {
+            margin-bottom: 32px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 16px 100px 16px 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            background: white;
+            transition: all 0.2s ease;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .amount-currency-select {
+            position: absolute;
+            right: 8px;
+            top: 32px;
+        }
+
+        .dropdown-toggle {
+            background: none;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            color: #374151;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-toggle:hover {
+            background-color: #f9fafb;
+            color: #3b82f6;
+        }
+
+        .dropdown-toggle img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            min-width: 120px;
+            z-index: 1000;
+            margin-top: 4px;
+        }
+
+        .dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 12px;
+            text-decoration: none;
+            color: #374151;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f9fafb;
+            text-decoration: underline;
+        }
+
+        .dropdown-item img {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+        }
+
+        .amount-currency-info {
+            list-style: none;
+            margin-bottom: 32px;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 20px;
+        }
+
+        .amount-currency-info li {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f9fafb;
+        }
+
+        .info-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            color: #9ca3af;
+            font-size: 16px;
+        }
+
+        .info-left {
+            flex: 1;
+            font-size: 14px;
+            color: #111827;
+        }
+
+        .info-left b {
+            font-weight: 600;
+        }
+
+        .info-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .info-right .dropdown-toggle {
+            padding: 4px 8px;
+            font-size: 13px;
+            color: #3b82f6;
+            cursor: pointer;
+        }
+
+        .info-right .dropdown-toggle:hover {
+            text-decoration: underline;
+        }
+
+        .fee-text {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .lock-icon {
+            position: absolute;
+            right: 44px;
+            top: 32px;
+            padding: 12px;
+            color: #9ca3af;
+        }
+
+        .amount-delivery-time {
+            text-align: center;
+            margin-bottom: 32px;
+            padding: 16px;
+            background: #10b981;
+            border-radius: 8px;
+            font-size: 14px;
+            color: white;
+        }
+
+        .amount-delivery-time b {
+            color: white;
+            font-weight: 600;
+        }
+
+        .amount-btn-group {
+            list-style: none;
+            display: flex;
+            gap: 16px;
+        }
+
+        .amount-btn-group li {
+            flex: 1;
+        }
+
+        .default-btn2, .optional-btn2 {
+            width: 100%;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.2s ease;
+            background: white;
+        }
+
+        .default-btn2 {
+            color: #6b7280;
+            border: none;
+            text-decoration: underline;
+            color: #10b981;
+        }
+
+        .default-btn2:hover {
+            cursor: pointer;
+            border-color: none;
+            text-decoration: underline;
+        }
+
+        .optional-btn2 {
+            color: #111827;
+            border: 1px solid #111827;
+        }
+
+        .optional-btn2:hover {
+            color: #3b82f6;
+            border-color: #3b82f6;
+            text-decoration: underline;
+        }
+
+        /* Remove Bootstrap dropdown JS dependency - simple click toggle */
+        .dropdown-toggle:focus + .dropdown-menu,
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .alert-info {
+            font-size: 13px;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 6px;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .info-icon-svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        /* --- Phone mockup stack --- */
+        .mockup-stack {
+        position: relative;
+        width: 100%;
+        max-width: 380px;            
+        margin: 0 auto;
+        aspect-ratio: 9 / 16;        
+        }
+
+        .mockup-stack .phone {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 78%;                  
+        transform: translate(-50%, -50%);
+        border-radius: 28px;         /
+        box-shadow:
+            0 6px 12px rgba(0,0,0,0.10),
+            0 18px 40px rgba(0,0,0,0.18);
+        outline: 1px solid rgba(255,255,255,0.25); 
+        /* background: #000;             */
+        }
+
+        .mockup-stack .phone.back {
+        z-index: 1;
+        transform: translate(-60%, -52%) rotate(-6deg); 
+        filter: saturate(0.95) brightness(0.98);
+        }
+
+        .mockup-stack .phone.front {
+        z-index: 2;
+        transform: translate(-42%, -48%) rotate(4deg);
+        }
+
+        .mockup-stack .phone img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: inherit;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+        .mockup-stack:hover .phone.back {
+            transform: translate(-62%, -54%) rotate(-8deg);
+            transition: transform 300ms ease;
+        }
+        .mockup-stack:hover .phone.front {
+            transform: translate(-40%, -46%) rotate(6deg);
+            transition: transform 300ms ease;
+        }
+        }
+
+        @media (max-width: 576px) {
+        .mockup-stack {
+            max-width: 320px;
+        }
+        .mockup-stack .phone.back {
+            transform: translate(-55%, -51%) rotate(-4deg);
+        }
+        .mockup-stack .phone.front {
+            transform: translate(-45%, -49%) rotate(3deg);
+        }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+        .mockup-stack .phone,
+        .mockup-stack:hover .phone {
+            transition: none !important;
+        }
+        }
+
+        /* Control FAQ GIF sizing */
+        .faq-image img {
+        max-width: 320px;  
+        max-height: 680px;  
+        width: 100%;        
+        height: auto;       
+        display: block;
+        margin: 0 auto;     
+        border-radius: 16px; 
+        }
+
+        /* Side-by-side phone mockups */
+        .why-choose-us-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        }
+
+        /* Style the phone images */
+        .why-choose-us-image .choose-image img {
+        width: 85%;
+        max-width: 320px; 
+        max-height: 560px;
+        height: auto;
+        display: block;
+        border-radius: 20px;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Hide completely on tablets and smaller */
+        @media (max-width: 991.98px) {
+        .why-choose-us-image {
+            display: none;
+        }
+        }
+
+
+
+            
+        </style>
+    </head>
+    <body>
+
+        <!-- Start Header Area -->
+        <header class="main-header-area">
+            <!-- Start Navbar Area -->
+            <div class="navbar-area">
+                <div class="main-responsive-nav">
+                    <div class="container">
+                        <div class="main-responsive-menu">
+                            <div class="logo">
+                                <a href="/">
+                                    <img src="assets/images/zendp-logo.png" class="black-logo" alt="image">
+                                    <!-- <img src="assets/images/logo-2.png" class="white-logo" alt="image"> -->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-navbar">
+                    <div class="container-fluid">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                            <a class="navbar-brand" href="/">
+                                <img src="assets/images/zendp-logo.png" class="black-logo" alt="image">
+                                <!-- <img src="assets/images/logo-2.png" class="white-logo" alt="image"> -->
+                            </a>
+                            
+                            <div class="navbar-list">
+                                <ul>
+                                    <li class="language-selector">
+                                        <div class="dropdown">
+                                            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <img src="assets/images/language-flags/US.png" alt="English">
+                                                <span>English</span>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item active" href="#">
+                                                    <img src="assets/images/language-flags/US.png" alt="English">
+                                                    English
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="assets/images/language-flags/DE.png" alt="German">
+                                                    Deutsch
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="assets/images/language-flags/FR.png" alt="French">
+                                                    Français
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="assets/images/language-flags/ES.png" alt="Spanish">
+                                                    Español
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="/contact">Support</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a href="/" class="nav-link active">
+                                            Home 
+                                            <!-- <i class="ri-arrow-down-s-line"></i> -->
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="/about-us" class="nav-link">About Us</a>
+                                    </li>
+
+                                    <!-- <li class="nav-item">
+                                        <a href="/compare-pricing" class="nav-link">Compare Pricing</a>
+                                    </li> -->
+
+                        
+
+                                    <li class="nav-item">
+                                        <a href="/countries" class="nav-link">Countries</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="/faq" class="nav-link">FAQ</a>
+                                    </li>
+        
+                                    <li class="nav-item">
+                                        <a href="/contact" class="nav-link">Contact</a>
+                                    </li>
+                                </ul>
+
+                                <div class="others-options d-flex align-items-center">
+                                    <div class="option-item">
+                                        <a href="/coming-soon" class="default-btn">Download App</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="others-option-for-responsive">
+                    <div class="container">
+                        <div class="dot-menu">
+                            <div class="inner">
+                                <div class="circle circle-one"></div>
+                                <div class="circle circle-two"></div>
+                                <div class="circle circle-three"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="container">
+                            <div class="option-inner">
+                                <div class="others-options d-flex align-items-center">
+                                    <div class="option-item">
+                                        <a href="/coming-soon" class="default-btn">Download App</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+        </header>
+        <!-- End Header Area -->
+
+        <!-- Start Main Banner Area -->
+        <div class="main-banner-area">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                        <div class="main-banner-content">
+                            <span>Simple. Quick. Secure.</span>
+                            <h1>Transfer Money Across World In Real Time</h1>
+                            <p>Transfer funds from the UK, US, and Canada to destinations across Africa, and Latin America with competitive exchange rates. Enjoy speedy transfers directly to mobile wallets on major networks, allowing you to send money effortlessly from your smartphone, anytime, anywhere.<a href="/about-us">Learn more</a></p>
+
+							<div class="banner-btn">
+								<div class="d-flex flex-row gap-3 flex-wrap">
+									<a href="https://play.google.com/store" target="_blank" rel="noopener" class="app-btn d-flex align-items-center border border-secondary" style="min-width:180px; padding:8px 16px; background:#222; color:#fff;">
+										<img src="/assets/images/google-play-badge.svg" alt="Get it on Google Play" style="height:32px; margin-right:12px;">
+										<div class="d-flex flex-column align-items-start app-btn-text" style="gap:2px;">
+											<span style="font-size:12px; font-weight:600; color:#fff;">Get it on</span>
+											<span style="font-size:18px; font-weight:700; color:#fff;">Google Play</span>
+										</div>
+									</a>
+									<a href="https://www.apple.com/app-store/" target="_blank" rel="noopener" class="app-btn2 d-flex align-items-center border border-secondary" style="min-width:180px; padding:8px 16px; background:inherit; color:#222;">
+										<img src="/assets/images/app-store-badge.svg" alt="Download on the App Store" style="height:32px; margin-right:12px;">
+										<div class="d-flex flex-column align-items-start  app-btn-text" style="gap:2px;">
+											<span style="font-size:12px; font-weight:600; color:#555;">Download on the</span>
+											<span style="font-size:18px; font-weight:700; color:#222;">App Store</span>
+										</div>
+									</a>
+								</div>
+								<style>
+									.app-btn{
+										background: #222 !important;
+										color: #fff !important;
+										border-radius: 6.5px;
+                                        width: fit-content;
+                                        line-height: 0;
+									}
+									.app-btn2{
+										background: inherit !important;
+										border-radius: 6.5px;
+                                        line-height: 0;
+                                        width: fit-content;
+									}
+									.platform-name:hover{
+										cursor: pointer;
+										text-decoration: underline;
+									}
+								</style>
+							</div>
+							
+							<ul class="trust-content">
+								<li>
+									<div class="review-platform" style="display:flex;flex-direction:column;align-items:flex-start;">
+										<div class="platform-header" style="display:flex;align-items:center;gap:10px;">
+											<!-- Google Logo SVG (actual logo) -->
+											<span class="platform-logo" style="display:inline-flex;align-items:center;">
+												<img src="/assets/images/google-logo.svg" alt="Google Logo" style="height:24px;">
+											</span>
+											<span class="platform-name" style="font-weight:600;font-size:1.1em;">Google Reviews</span>
+										</div>
+										<div class="rating-stars" style="margin:8px 0 0 0;">
+											<i class="ri-star-fill" style="color:#FFD600;"></i>
+											<i class="ri-star-fill" style="color:#FFD600;"></i>
+											<i class="ri-star-fill" style="color:#FFD600;"></i>
+											<i class="ri-star-fill" style="color:#FFD600;"></i>
+											<i class="ri-star-fill" style="color:#FFD600;"></i>
+										</div>
+										<span class="rating-text" style="margin-top:8px;"><strong>4.8</strong> (200k+ reviews)</span>
+									</div>
+								</li>
+								<li>
+									<div class="review-platform" style="display:flex;flex-direction:column;align-items:flex-start;">
+										<div class="platform-header" style="display:flex;align-items:center;gap:10px;">
+											<!-- Trustpilot Logo SVG -->
+											<span class="platform-logo" style="display:inline-flex;align-items:center;">
+												<svg width="28" height="28" viewBox="0 0 32 32" style="margin-right:0;" xmlns="http://www.w3.org/2000/svg">
+													<polygon points="16,2 20,12 31,12 22,19 25,30 16,23 7,30 10,19 1,12 12,12" fill="#00B67A"/>
+													<polygon points="16,6 18.5,12 25,12 20,16 22,22 16,18 10,22 12,16 7,12 13.5,12" fill="#FFF"/>
+												</svg>
+											</span>
+											<span class="platform-name" style="font-weight:600;font-size:1.1em;">Trustpilot</span>
+										</div>
+										<div class="rating-stars trustpilot-stars" style="margin:8px 0 0 0;">
+											<img src="/assets/images/stars-4.5.svg" style="height:22px;">
+										</div>
+										<span class="rating-text" style="margin-top:8px;"><strong>4.9</strong> (500+ reviews)</span>
+									</div>
+								</li>
+							</ul>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-lg-4 col-md-12">
+                        <div class="main-banner-image" data-speed="0.05" data-revert="true">
+                            <img src="/assets/images/main-banner/banner-women.png" alt="image" data-aos="fade-down" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                        </div>
+                    </div> -->
+
+        <div class="col-lg-6 col-md-12 mt-4" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+            <form class="money-transfer-form">
+                <div class="form-group">
+                    <label>You Send</label>
+                    <input type="text" class="form-control" id="send-amount" autocomplete="off" value="100">
+                    
+                    <div class="dropdown amount-currency-select">
+                        <button class="dropdown-toggle" type="button" id="sendCurrencyDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://flagcdn.com/w40/us.png" alt="USD flag" id="send-flag">
+                            <span id="send-currency">USD</span>
+                        </button>
+                        <div class="dropdown-menu currency-dropdown-menu" aria-labelledby="sendCurrencyDropdown">
+                            <a class="dropdown-item" href="#" data-currency="USD" data-flag="us">
+                                <img src="https://flagcdn.com/w40/us.png" alt="USD flag">
+                                USD
+                            </a>
+                            <a class="dropdown-item" href="#" data-currency="NGN" data-flag="ng">
+                                <img src="https://flagcdn.com/w40/ng.png" alt="NGN flag">
+                                NGN
+                            </a>
+                            <a class="dropdown-item" href="#" data-currency="KES" data-flag="ke">
+                                <img src="https://flagcdn.com/w40/ke.png" alt="KES flag">
+                                KES
+                            </a>
+                            <a class="dropdown-item" href="#" data-currency="EUR" data-flag="eu">
+                                <img src="https://flagcdn.com/w40/eu.png" alt="EUR flag">
+                                EUR
+                            </a>
+                            <a class="dropdown-item" href="#" data-currency="GBP" data-flag="gb">
+                                <img src="https://flagcdn.com/w40/gb.png" alt="GBP flag">
+                                GBP
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="amount-currency-info">
+                    <li>
+                        <!-- <div class="info-icon">−</div>
+                        <div class="info-left"><b id="fee-amount">5.00 USD</b></div>
+                        <div class="info-right">
+                            <div class="dropdown transfer-type-dropdown">
+                                <button class="dropdown-toggle" type="button" id="transferTypeDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#10b981;">
+                                    Low Cost Transfer
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="transferTypeDropdown">
+                                    <a class="dropdown-item" href="#" data-fee="0.005">Low Cost Transfer (0.5%)</a>
+                                    <a class="dropdown-item" href="#" data-fee="0.01">Easy Transfer (1%)</a>
+                                    <a class="dropdown-item" href="#" data-fee="0.02">Advanced Transfer (2%)</a>
+                                </div>
+                            </div>
+                            <span class="fee-text">fee</span>
+                        </div> -->
+                    </li>
+
+                    <!-- <li>
+                        <div class="info-icon">=</div>
+                        <div class="info-left"><span id="convert-amount">995.00 USD</span></div>
+                        <div class="info-right">Amount Will Convert</div>
+                    </li> -->
+
+                    <li>
+                        <div class="info-icon">×</div>
+                        <div class="info-left"><strong id="exchange-rate">135.50 ↗</strong></div>
+                        <div class="info-right">Guaranteed Rate (4 hrs)</div>
+                    </li>
+                </ul>
+
+                <div class="form-group">
+                    <label>Recipient Gets</label>
+                    <input type="text" class="form-control" id="receive-amount" autocomplete="off" value="151,137.38" readonly>
+                    
+                    <div class="dropdown amount-currency-select">
+                        <button class="dropdown-toggle" type="button" id="receiveCurrencyDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://flagcdn.com/w40/ng.png" alt="NGN flag" id="receive-flag">
+                            <span id="receive-currency">NGN</span>
+                        </button>
+                        <div class="dropdown-menu currency-dropdown-menu" aria-labelledby="receiveCurrencyDropdown">
+                            <a class="dropdown-item" href="#" data-currency="USD" data-flag="us">
+                                <img src="https://flagcdn.com/w40/us.png" alt="USD flag">
+                                USD
+                            </a>
+                            <a class="dropdown-item" href="#" data-currency="NGN" data-flag="ng">
+                                <img src="https://flagcdn.com/w40/ng.png" alt="NGN flag">
+                                NGN
+                            </a>
+                            <a class="dropdown-item" href="#" data-currency="KES" data-flag="ke">
+                                <img src="https://flagcdn.com/w40/ke.png" alt="KES flag">
+                                KES
+                            </a>
+                            <a class="dropdown-item" href="#" data-currency="EUR" data-flag="eu">
+                                <img src="https://flagcdn.com/w40/eu.png" alt="EUR flag">
+                                EUR
+                            </a>
+                            <a class="dropdown-item" href="#" data-currency="GBP" data-flag="gb">
+                                <img src="https://flagcdn.com/w40/gb.png" alt="GBP flag">
+                                GBP
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lock-icon"></div>
+                </div>
+
+                <div class="amount-delivery-time">
+                    Delivery Time: <b >In 2 seconds</b>
+                </div>
+
+        <div class="alert-info">
+            <svg class="info-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            Rates are updated in real-time using free exchange rate APIs
+        </div>
+
+                <ul class="amount-btn-group">
+                    <li>
+                        <a href="/" class="default-btn2">Transfer fees: 0.00 USD</a>
+                </li>
+                </ul>
+    </form>
+
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elements
+            const sendAmountInput = document.getElementById('send-amount');
+            const receiveAmountInput = document.getElementById('receive-amount');
+            const sendCurrencyElement = document.getElementById('send-currency');
+            const receiveCurrencyElement = document.getElementById('receive-currency');
+            const sendFlagElement = document.getElementById('send-flag');
+            const receiveFlagElement = document.getElementById('receive-flag');
+            const feeAmountElement = document.getElementById('fee-amount');
+            const convertAmountElement = document.getElementById('convert-amount');
+            const exchangeRateElement = document.getElementById('exchange-rate');
+            const deliveryDateElement = document.getElementById('delivery-date');
+            
+            let sendCurrency = 'USD';
+            let receiveCurrency = 'NGN';
+            let exchangeRate = 1526.64;
+            let transferFeePercentage = 0.005;
+            let transferType = 'Low Cost Transfer';
+            
+            function setDeliveryDate() {
+                const today = new Date();
+                let deliveryDate = new Date(today);
+                let daysToAdd = 3;
+                
+                while (daysToAdd > 0) {
+                    deliveryDate.setDate(deliveryDate.getDate() + 1);
+                    if (deliveryDate.getDay() !== 0 && deliveryDate.getDay() !== 6) {
+                        daysToAdd--;
+                    }
+                }
+                
+                const options = { month: 'long', day: 'numeric' };
+                deliveryDateElement.textContent = `By ${deliveryDate.toLocaleDateString('en-US', options)}`;
+            }
+            
+            function formatNumber(num) {
+                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+            
+            function parseNumber(formattedNum) {
+                return parseFloat(formattedNum.replace(/,/g, ''));
+            }
+            
+            function calculateConversion() {
+                let sendAmount = parseNumber(sendAmountInput.value) || 0;
+                
+                const feeAmount = sendAmount * transferFeePercentage;
+                const amountToConvert = sendAmount - feeAmount;
+                
+                const receiveAmount = amountToConvert * exchangeRate;
+                
+                feeAmountElement.textContent = `${formatNumber(feeAmount.toFixed(2))} ${sendCurrency}`;
+                convertAmountElement.textContent = `${formatNumber(amountToConvert.toFixed(2))} ${sendCurrency}`;
+                receiveAmountInput.value = formatNumber(receiveAmount.toFixed(2));
+                exchangeRateElement.textContent = `${exchangeRate.toFixed(2)} ↗`;
+            }
+            
+            async function fetchExchangeRate() {
+                try {
+                    const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${sendCurrency}`);
+                    const data = await response.json();
+                    
+                    if (data && data.rates && data.rates[receiveCurrency]) {
+                        exchangeRate = data.rates[receiveCurrency];
+                        calculateConversion();
+                    } else {
+                        console.log("Using fallback exchange rates");
+                        const fallbackRates = {
+                            'USD': { 'KES': 135.5, 'NGN': 785.3, 'EUR': 0.85, 'GBP': 0.73, 'USD': 1 },
+                            'KES': { 'USD': 0.0074, 'NGN': 5.8, 'EUR': 0.0063, 'GBP': 0.0054, 'KES': 1 },
+                            'NGN': { 'USD': 0.0013, 'KES': 0.17, 'EUR': 0.0011, 'GBP': 0.0009, 'NGN': 1 },
+                            'EUR': { 'USD': 1.18, 'KES': 159.2, 'NGN': 925.0, 'GBP': 0.86, 'EUR': 1 },
+                            'GBP': { 'USD': 1.37, 'KES': 185.3, 'NGN': 1076.5, 'EUR': 1.16, 'GBP': 1 }
+                        };
+                        
+                        if (fallbackRates[sendCurrency] && fallbackRates[sendCurrency][receiveCurrency]) {
+                            exchangeRate = fallbackRates[sendCurrency][receiveCurrency];
+                            calculateConversion();
+                        }
+                    }
+                } catch (error) {
+                    console.error("Error fetching exchange rate:", error);
+                }
+            }
+            
+            // Event listeners for currency dropdowns
+            document.querySelectorAll('.currency-dropdown-menu .dropdown-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const currency = this.getAttribute('data-currency');
+                    const flagCode = this.getAttribute('data-flag');
+                    
+                    // Determine if this is for send or receive
+                    const isSendCurrency = this.closest('.dropdown-menu').getAttribute('aria-labelledby') === 'sendCurrencyDropdown';
+                    
+                    if (isSendCurrency) {
+                        sendCurrency = currency;
+                        sendCurrencyElement.textContent = currency;
+                        sendFlagElement.src = `https://flagcdn.com/w40/${flagCode}.png`;
+                        sendFlagElement.alt = `${currency} flag`;
+                    } else {
+                        receiveCurrency = currency;
+                        receiveCurrencyElement.textContent = currency;
+                        receiveFlagElement.src = `https://flagcdn.com/w40/${flagCode}.png`;
+                        receiveFlagElement.alt = `${currency} flag`;
+                    }
+                    
+                    // Prevent same currency selection
+                    if (sendCurrency === receiveCurrency) {
+                        if (isSendCurrency) {
+                            receiveCurrency = receiveCurrency === 'USD' ? 'NGN' : 'USD';
+                            receiveCurrencyElement.textContent = receiveCurrency;
+                            receiveFlagElement.src = `https://flagcdn.com/w40/${receiveCurrency === 'USD' ? 'us' : 'ng'}.png`;
+                        } else {
+                            sendCurrency = sendCurrency === 'USD' ? 'NGN' : 'USD';
+                            sendCurrencyElement.textContent = sendCurrency;
+                            sendFlagElement.src = `https://flagcdn.com/w40/${sendCurrency === 'USD' ? 'us' : 'ng'}.png`;
+                        }
+                    }
+                    
+                    fetchExchangeRate();
+                });
+            });
+            
+            // Event listener for transfer type dropdown
+            document.querySelectorAll('.transfer-type-dropdown .dropdown-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    transferFeePercentage = parseFloat(this.getAttribute('data-fee'));
+                    transferType = this.textContent;
+                    
+                    // Update the dropdown toggle text
+                    document.getElementById('transferTypeDropdown').textContent = transferType;
+                    
+                    calculateConversion();
+                });
+            });
+            
+            sendAmountInput.addEventListener('input', function() {
+                let cursorPosition = this.selectionStart;
+                let originalLength = this.value.length;
+                
+                let numericValue = this.value.replace(/[^0-9.]/g, '');
+                
+                let parts = numericValue.split('.');
+                parts[0] = formatNumber(parts[0].replace(/,/g, ''));
+                
+                this.value = parts.join('.');
+                
+                let newLength = this.value.length;
+                cursorPosition = cursorPosition + (newLength - originalLength);
+                this.setSelectionRange(cursorPosition, cursorPosition);
+                
+                calculateConversion();
+            });
+            
+            setDeliveryDate();
+            fetchExchangeRate();
+        });
+    </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Main Banner Area -->
+         
+        
+        <!-- Start Global Transfers Area -->
+        <div class="global-transfers-area pt-100 pb-75">
+            <div class="container">
+                <div class="section-title">
+                    <span>Global Transfers</span>
+                    <h2>We Charge As Little As Possible. No Subscription Fee</h2>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-global-transfers-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                            <div class="icon">
+                                <i class="flaticon-envelope"></i>
+                            </div>
+                            <h3>Send Money Cheaper And Easier Than Old-school Banks</h3>
+                            <p>Save up to 85% on transfer fees with real-time exchange rates and instant processing.</p>
+                            <a href="/help-center" class="global-btn">Send Money</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-global-transfers-card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+                            <div class="icon">
+                                <i class="flaticon-money-transfer"></i>
+                            </div>
+                            <h3>Spend Abroad Without The Hidden Fees</h3>
+                            <p>Get the real exchange rate with no markup and transparent pricing on all international transactions.</p>
+                            <a href="/help-center" class="global-btn">Get Started</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-global-transfers-card" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                            <div class="icon">
+                                <i class="flaticon-income"></i>
+                            </div>
+                            <h3>Receive Payments Like A Local In 9 Currencies</h3>
+                            <p>Get local bank details in USD, EUR, GBP, and 6 other major currencies for seamless payments</p>
+                            <a href="/help-center" class="global-btn">Available Accounts</a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-global-transfers-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                            <div class="icon">
+                                <i class="flaticon-conversion"></i>
+                            </div>
+                            <h3>Convert And Hold 54 Currencies</h3>
+                            <p>Access competitive exchange rates for 54 global currencies with no hidden fees or minimum balances</p>
+                            <a href="/help-center" class="global-btn">See All Currencies</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Global Transfers Area -->
+
+        <!-- Start Why Choose Us Area -->
+        <div class="why-choose-us-area ptb-100">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="why-choose-us-content" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                            <span>Why Choose Us</span>
+                            <h3>Moving And Living Abroad Just Got Simpler Get Paid Like A Local</h3>
+                            <p>ZendP lets you hold, convert, and send money across borders at live rates with fees you see upfront. Open local account details (where supported) so salaries, invoices, and transfers land like domestic payments.</p>
+
+                            <ul class="choose-us-list">
+                                <li>
+                                    <i class="ri-checkbox-circle-line"></i> 
+                                    Send money cheaper and easier than old-school banks.
+                                </li>
+                                <li>
+                                    <i class="ri-checkbox-circle-line"></i> 
+                                    Spend abroad without the hidden fees.
+                                </li>
+                                <li>
+                                    <i class="ri-checkbox-circle-line"></i> 
+                                    Move money between countries for salary & more.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="why-choose-us-image">
+                            <div class="row align-items-center">
+                            
+                            <!-- Left image -->
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="choose-image" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                                <img src="/assets/images/mockups/zendp-phone-dashboard.png" alt="ZendP Dashboard">
+                                </div>
+                            </div>
+
+                            <!-- Right image -->
+                            <div class="col-lg-6 col-sm-6">
+                                <div class="choose-image" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                                <img src="/assets/images/mockups/zendp-phone-back.png" alt="ZendP App Screen">
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Why Choose Us Area -->
+
+        <!-- Start Coverage Area -->
+        <div class="coverage-area pt-100 pb-75">
+        <div class="container">
+            <div class="section-title">
+            <span>We Are Covering</span>
+            <h2>Get These Local Account Details Pay Just Like Pay A Local</h2>
+            </div>
+
+            <div class="row justify-content-center">
+            <!-- United Kingdom -->
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-coverage-card" data-aos="fade-up" data-aos-delay="10" data-aos-duration="100" data-aos-once="true">
+                <div class="content">
+                    <span class="coverage-flag">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="United Kingdom flag" loading="lazy">
+                    </span>
+                    <h3>United Kingdom</h3>
+                </div>
+                </div>
+            </div>
+
+            <!-- United States -->
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-coverage-card" data-aos="fade-up" data-aos-delay="20" data-aos-duration="200" data-aos-once="true">
+                <div class="content">
+                    <span class="coverage-flag">
+                    <img src="https://flagcdn.com/w40/us.png" alt="United States flag" loading="lazy">
+                    </span>
+                    <h3>United States</h3>
+                </div>
+                </div>
+            </div>
+
+            <!-- Canada -->
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-coverage-card" data-aos="fade-up" data-aos-delay="30" data-aos-duration="300" data-aos-once="true">
+                <div class="content">
+                    <span class="coverage-flag">
+                    <img src="https://flagcdn.com/w40/ca.png" alt="Canada flag" loading="lazy">
+                    </span>
+                    <h3>Canada</h3>
+                </div>
+                </div>
+            </div>
+
+            <!-- Nigeria -->
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-coverage-card" data-aos="fade-up" data-aos-delay="40" data-aos-duration="400" data-aos-once="true">
+                <div class="content">
+                    <span class="coverage-flag">
+                    <img src="https://flagcdn.com/w40/ng.png" alt="Nigeria flag" loading="lazy">
+                    </span>
+                    <h3>Nigeria</h3>
+                </div>
+                </div>
+            </div>
+
+            <!-- Kenya -->
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-coverage-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                <div class="content">
+                    <span class="coverage-flag">
+                    <img src="https://flagcdn.com/w40/ke.png" alt="Kenya flag" loading="lazy">
+                    </span>
+                    <h3>Kenya</h3>
+                </div>
+                </div>
+            </div>
+
+            <!-- Ghana -->
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-coverage-card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+                <div class="content">
+                    <span class="coverage-flag">
+                    <img src="https://flagcdn.com/w40/gh.png" alt="Ghana flag" loading="lazy">
+                    </span>
+                    <h3>Ghana</h3>
+                </div>
+                </div>
+            </div>
+
+            <!-- South Africa -->
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-coverage-card" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                <div class="content">
+                    <span class="coverage-flag">
+                    <img src="https://flagcdn.com/w40/za.png" alt="South Africa flag" loading="lazy">
+                    </span>
+                    <h3>South Africa</h3>
+                </div>
+                </div>
+            </div>
+
+            <!-- Cameroon -->
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-coverage-card" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                <div class="content">
+                    <span class="coverage-flag">
+                    <img src="https://flagcdn.com/w40/cm.png" alt="Cameroon flag" loading="lazy">
+                    </span>
+                    <h3>Cameroon</h3>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Optional shapes (keep commented if not used) -->
+        <!--
+        <div class="coverage-shape">
+            <img src="/assets/images/coverage/shape-1.png" alt="image">
+        </div>
+        <div class="coverage-shape-2">
+            <img src="/assets/images/coverage/shape-2.png" alt="image">
+        </div>
+        -->
+        </div>
+        <!-- End Coverage Area -->
+
+        <!-- Start Features Area -->
+        <div class="features-area ptb-100">
+        <div class="container">
+            <div class="row align-items-center">
+            <div class="col-lg-8 col-md-12">
+                <div class="features-content" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                <span>Our Features</span>
+                <h3>The Reliable, Affordable & Fast Way to Send Money Abroad</h3>
+                </div>
+
+                <div class="row justify-content-center">
+                <!-- Faster & Cheaper -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="single-features-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                    <div class="icon-image">
+                        <img src="/assets/images/features/icon-1.png" alt="image">
+                    </div>
+                    <div class="content">
+                        <h3>Faster & Cheaper</h3>
+                        <ul class="list">
+                        <li><i class="ri-checkbox-circle-line"></i> Live exchange rates with clear, upfront fees—no hidden markups.</li>
+                        <li><i class="ri-checkbox-circle-line"></i> Instant or same-day delivery to bank accounts & mobile wallets (where supported).</li>
+                        <li><i class="ri-checkbox-circle-line"></i> Low-cost routes via local payout partners to keep transfers affordable.</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Trusted & Secure -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="single-features-card" data-aos="fade-down" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                    <div class="icon-image">
+                        <img src="/assets/images/features/icon-2.png" alt="image">
+                    </div>
+                    <div class="content">
+                        <h3>Trusted & Secure</h3>
+                        <ul class="list">
+                        <li><i class="ri-checkbox-circle-line"></i> End-to-end encryption and two-step verification on every account.</li>
+                        <li><i class="ri-checkbox-circle-line"></i> KYC/AML checks and verified recipients to protect your transfers.</li>
+                        <li><i class="ri-checkbox-circle-line"></i> Real-time fraud monitoring with instant alerts for unusual activity.</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Illustration -->
+            <div class="col-lg-4 col-md-12">
+            <div class="">
+                <div class="mockup-stack">
+                <!-- Back phone -->
+                <figure class="phone back" aria-hidden="true">
+                    <img src="/assets/images/mockups/zendp-phone-back.png" alt="" loading="lazy">
+                </figure>
+
+                <!-- Front phone -->
+                <figure class="phone front">
+                    <img src="/assets/images/mockups/zendp-phone-front.png" alt="ZendP mobile app screens preview" loading="lazy">
+                </figure>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- End Features Area -->
+
+
+
+        <!-- Start Review Area -->
+        <div class="review-area bg-F4F5F5 ptb-100">
+            <div class="container">
+                <div class="section-title">
+                    <span>Our Review</span>
+                    <h2>More Than 4,405,28 Happy Customers Trust Our Services</h2>
+                </div>
+
+                <div class="review-slides-two owl-carousel owl-theme">
+                    <div class="single-review-card" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                        <ul class="review-rating">
+                            <li><i class="ri-star-line"></i></li>
+                            <li><i class="ri-star-line"></i></li>
+                            <li><i class="ri-star-line"></i></li>
+                            <li><i class="ri-star-line"></i></li>
+                            <li><i class="ri-star-line"></i></li>
+                        </ul>
+                        <p>I was skeptical about online money transfers at first, but ZendP's security features and 24/7 customer support won me over. I now regularly send money to my son studying in the UK, and it always arrives faster than promised.</p>
+                        <div class="review-info">
+                            <img src="assets/images/review/review-1.jpg" alt="image">
+                            <h3>Thomoson Piterson</h3>
+                            <span>Endemycon Leader</span>
+                        </div>
+                        <div class="reviewquote-image">
+                            <img src="assets/images/quote-icon.png" alt="image">
+                        </div>
+                    </div>
+
+                    <div class="single-review-card" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+                        <ul class="review-rating">
+                            <li><i class="ri-star-line"></i></li>
+                            <li><i class="ri-star-line"></i></li>
+                            <li><i class="ri-star-line"></i></li>
+                            <li><i class="ri-star-line"></i></li>
+                            <li><i class="ri-star-line"></i></li>
+                        </ul>
+                        <p>As a small business owner importing goods from Europe, ZendP has saved me thousands in bank fees. The multi-currency account feature is brilliant - I can receive EUR payments and convert to USD/p>
+                        <div class="review-info">
+                            <img src="assets/images/review/review-2.jpg" alt="image">
+                            <h3>Maxwel Warner</h3>
+                            <span>Endemycon Leader</span>
+                        </div>
+                        <div class="reviewquote-image">
+                            <img src="assets/images/quote-icon.png" alt="image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-optional-content">
+                    <p>But don’t just take our word for it - check out what our customers have to say about their experience with us: <b>Excellent</b> <span>Based on 25,454 reviews</span></p>
+                </div>
+            </div>
+
+            <div class="review-shape">
+            </div>
+            <div class="review-shape-2">
+            </div>
+        </div>
+        <!-- End Review Area -->
+
+        <!-- Start Overview Area -->
+        <div class="overview-area ptb-100">
+            <div class="container">
+                <div class="overview-content" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                    <span>Connect Us</span>
+                    <h3>Sending International Business Payments or Sending Money To Family Overseas? At ZendP, we are your fast and simple solution</h3>
+
+                </div>
+            </div>
+
+            <div class="overview-shape">
+                <img src="assets/images/overview/shape-1.png" alt="image">
+            </div>
+            <div class="overview-shape-2">
+                <!-- <img src="assets/images/overview/shape-2.png" alt="image"> -->
+            </div>
+        </div>
+        <!-- End Overview Area -->
+
+        <!-- Start FAQ Area -->
+        <div class="faq-area ptb-100">
+        <div class="container">
+            <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="faq-image">
+                <img src="/assets/images/mockups/zendp-faq.gif" alt="image">
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="faq-item" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                <div class="faq-content">
+                    <span>Frequently Asked Questions</span>
+                    <h3>Let’s answer some of your most common questions</h3>
+                </div>
+                
+                <div class="faq-accordion">
+                    <div class="accordion" id="FaqAccordion">
+
+                    <!-- Q1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What Is a Multi-Currency Account and How Does It Work?
+                        </button>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#FaqAccordion">
+                        <div class="accordion-body">
+                            <p>
+                            A ZendP Multi-Currency Account lets you hold, convert, and send money in multiple currencies under one profile. 
+                            You can add funds in one currency and convert to another at competitive rates with a clear, upfront fee shown before you confirm.
+                            In supported regions, you can also receive money like a local using domestic account details, then send out to bank accounts or mobile wallets.
+                            </p>
+                            <p class="mb-0">
+                            Everything happens in real time where available, and you always see the rate, fees, and delivery estimate before you pay.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What Happened to the Borderless Account?
+                        </button>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#FaqAccordion">
+                        <div class="accordion-body">
+                            <p>
+                            We now refer to our cross-currency account simply as the <strong>Multi-Currency Account</strong>. 
+                            The core experience is the same—hold balances in different currencies, convert at great rates, and send globally—just with a clearer name.
+                            </p>
+                            <p class="mb-0">
+                            If you previously heard “borderless,” you’re in the right place: all features live inside your Multi-Currency Account.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Can I Hold Multiple Currencies in a ZendP Account?
+                        </button>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#FaqAccordion">
+                        <div class="accordion-body">
+                            <p>
+                            Yes. You can keep balances in several currencies (for example: USD, GBP, EUR, CAD) and send to popular African destinations 
+                            (like NGN, KES, GHS, ZAR, and others). You can convert instantly between supported currencies, and we’ll show you the live rate and fee before you proceed.
+                            </p>
+                            <p class="mb-0">
+                            Availability can vary by location and compliance requirements. For the current list of supported corridors and payout methods, 
+                            please check our coverage section on this page.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+
+                    </div><!-- /.accordion -->
+                </div><!-- /.faq-accordion -->
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- End FAQ Area -->
+
+
+        <!-- End Footer Area -->
+        <footer class="footer-area pt-100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                            <div class="widget-logo">
+                                <img src="/assets/images/zendp-logo.png" class="black-logo" alt="image">
+                            </div>
+                            <p>To get exclusive updates and benefits.</p>
+                            
+                            <form class="newsletter-form" data-bs-toggle="validator">
+                                <input type="email" class="input-newsletter" placeholder="Enter email" name="EMAIL" required autocomplete="off">
+        
+                                <button type="submit" class="default-btn">Subscribe</button>
+                                <div id="validator-newsletter" class="form-result"></div>
+                            </form>
+
+                            <ul class="widget-social">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class="ri-facebook-fill"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/?lang=en" target="_blank">
+                                        <i class="ri-twitter-fill"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class="ri-instagram-line"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/signup" target="_blank">
+                                        <i class="ri-linkedin-line"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+                            <h3>Company And Team</h3>
+
+                            <ul class="quick-links">
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/help-center">Help Center</a></li>
+                                <li><a href="/about-us">About Us</a></li>
+                                <!-- <li><a href="/help-center">Affiliates And Partnerships</a></li> -->
+                                <li><a href="/about-us"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                            <h3>Resources</h3>
+
+                            <ul class="quick-links">
+                                <!-- <li><a href="/help-center">Security</a></li> -->
+                                <li><a href="/faq">FAQ's</a></li>
+                                <li><a href="/help-center">Community</a></li>
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                            <h3>Contact Info</h3>
+
+                            <ul class="info-links">
+                                <!-- <li><span>Location:</span> 456 ZendP Avenue, New York, NY, USA</li> -->
+                                <li><span>Email:</span> <a href="mailto:info@zendp.com">info@zendp.com</a></li>
+                                <li><span>Phone:</span> <a href="tel:44789289524329">+1 800-555-0199	</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="copyright-area-content">
+                        <p>
+                            Copyright @ {year} ZendP All Rights Reserved by
+                            <a href="https://zendp.com/" target="_blank">
+                                zendp.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+
+        <!-- Start Go Top Area -->
+        <div class="go-top">
+            <i class="ri-arrow-up-s-line"></i>
+        </div>
+        <!-- End Go Top Area -->
+
+        <script is:inline>
+            // Language Selector Functionality
+		document.addEventListener('DOMContentLoaded', function() {
+			const languageItems = document.querySelectorAll('.language-selector .dropdown-item');
+			const languageToggle = document.querySelector('.language-selector .dropdown-toggle');
+			
+			// Only run if elements exist
+			if (languageItems.length > 0 && languageToggle) {
+				languageItems.forEach(item => {
+				item.addEventListener('click', function(e) {
+					e.preventDefault();
+					
+					// Remove active class from all items
+					languageItems.forEach(li => li.classList.remove('active'));
+					
+					// Add active class to clicked item
+					this.classList.add('active');
+					
+					// Update the toggle button
+					const img = this.querySelector('img');
+					const text = this.textContent.trim();
+					
+					if (img) {
+					const toggleImg = languageToggle.querySelector('img');
+					if (toggleImg) {
+						toggleImg.src = img.src;
+					}
+					}
+					
+					const toggleSpan = languageToggle.querySelector('span');
+					if (toggleSpan) {
+					toggleSpan.textContent = text;
+					}
+				});
+				});
+			}
+			});
+        </script>
+		
+        <!-- Links of JS files -->
+        <script is:inline src="/assets/js/jquery.min.js"></script>
+        <script is:inline src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script is:inline src="/assets/js/jquery.meanmenu.js"></script> 
+        <script is:inline src="/assets/js/owl.carousel.min.js"></script>
+        <script is:inline src="/assets/js/jquery.appear.js"></script>
+        <script is:inline src="/assets/js/odometer.min.js"></script>
+        <script is:inline src="/assets/js/jquery.magnific-popup.min.js"></script>
+        <script is:inline src="/assets/js/TweenMax.min.js"></script>
+        <script is:inline src="/assets/js/ScrollMagic.min.js"></script>
+        <script is:inline src="/assets/js/aos.js"></script>
+		<script is:inline src="/assets/js/jquery.ajaxchimp.min.js"></script>
+		<script is:inline src="/assets/js/form-validator.min.js"></script>
+        <script is:inline src="/assets/js/contact-form-script.js"></script>
+        <script is:inline src="/assets/js/wow.min.js"></script>
+        <script is:inline src="/assets/js/main.js"></script>
+    </body>
+</html>

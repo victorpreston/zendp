@@ -1,0 +1,649 @@
+---
+const year = new Date().getFullYear();
+---
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Links of CSS files -->
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/assets/css/aos.css">
+        <link rel="stylesheet" href="/assets/css/animate.min.css">
+        <link rel="stylesheet" href="/assets/css/meanmenu.min.css">
+        <link rel="stylesheet" href="/assets/css/remixicon.css">
+        <link rel="stylesheet" href="/assets/css/flaticon.css">
+        <link rel="stylesheet" href="/assets/css/odometer.min.css">
+        <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/navbar.css">
+        <link rel="stylesheet" href="/assets/css/footer.css">
+        <link rel="stylesheet" href="/assets/css/dark.css">
+		<link rel="stylesheet" href="/assets/css/responsive.css">
+		
+        <!--=== Title & Favicon ===-->
+		<title>ZendP - Seamless International Money Transfer</title>
+        <link rel="icon" type="image/png" href="assets/images/zendp.png">
+
+        <style>
+            /* Logo Sizing Constraints */
+            .navbar-brand img,
+            .main-responsive-menu .logo img {
+                max-height: 45px;
+                width: auto;
+                object-fit: contain;
+            }
+            
+            /* Mobile logo constraints */
+            @media only screen and (max-width: 1199px) {
+                .main-responsive-menu .logo img {
+                    max-height: 35px;
+                }
+            }
+            
+            /* Language Selector & Navbar List Styles */
+            .navbar-list {
+                display: flex;
+                align-items: center;
+                gap: 0;
+            }
+            
+            .navbar-list ul {
+                display: flex;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                gap: 25px;
+            }
+            
+            .navbar-list ul li {
+                display: flex;
+                align-items: center;
+            }
+            
+            .navbar-list ul li a {
+                color: var(--black-color);
+                font-size: 14px;
+                font-weight: 500;
+                transition: var(--transition);
+                text-decoration: none;
+            }
+            
+            .navbar-list ul li a:hover {
+                color: var(--main-color);
+            }
+            
+            .language-selector .dropdown-toggle {
+                background: none;
+                border: none;
+                color: var(--black-color);
+                font-size: 14px;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                padding: 0;
+                transition: var(--transition);
+                outline: none;
+                box-shadow: none;
+            }
+            
+            .language-selector .dropdown-toggle:hover,
+            .language-selector .dropdown-toggle:focus {
+                color: var(--main-color);
+                box-shadow: none;
+                outline: none;
+            }
+            
+            .language-selector .dropdown-toggle img {
+                width: 18px;
+                height: 13px;
+                border-radius: 2px;
+                object-fit: cover;
+            }
+            
+            /* Bootstrap adds chevron automatically via ::after pseudo-element */
+            .language-selector .dropdown-toggle::after {
+                font-size: 12px;
+                margin-left: 2px;
+                border-top-color: currentColor;
+            }
+            
+            .language-selector .dropdown-menu {
+                min-width: 140px;
+                padding: 8px 0;
+                border: 1px solid #e9ecef;
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+                border-radius: 6px;
+            }
+            
+            .language-selector .dropdown-item {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 8px 16px;
+                font-size: 14px;
+                font-weight: 400;
+                transition: var(--transition);
+                border: none;
+                background: none;
+                color: var(--black-color);
+            }
+            
+            .language-selector .dropdown-item img {
+                width: 18px;
+                height: 13px;
+                border-radius: 2px;
+                object-fit: cover;
+            }
+            
+            .language-selector .dropdown-item:hover,
+            .language-selector .dropdown-item:focus {
+                background-color: rgba(16, 185, 129, 0.1);
+                color: var(--main-color);
+                outline: none;
+            }
+            
+            .language-selector .dropdown-item.active {
+                background-color: rgba(16, 185, 129, 0.1);
+                color: var(--main-color);
+                font-weight: 500;
+            }
+            
+            /* Dark theme support */
+            .theme-dark .navbar-list ul li a {
+                color: var(--white-color);
+            }
+            
+            .theme-dark .navbar-list ul li a:hover {
+                color: var(--main-color);
+            }
+            
+            .theme-dark .language-selector .dropdown-toggle {
+                color: var(--white-color);
+            }
+            
+            .theme-dark .language-selector .dropdown-toggle:hover,
+            .theme-dark .language-selector .dropdown-toggle:focus {
+                color: var(--main-color);
+            }
+            
+            .theme-dark .language-selector .dropdown-menu {
+                background-color: #1a1a1a;
+                border: 1px solid #333;
+            }
+            
+            .theme-dark .language-selector .dropdown-item {
+                color: var(--white-color);
+            }
+            
+            .theme-dark .language-selector .dropdown-item:hover,
+            .theme-dark .language-selector .dropdown-item:focus {
+                background-color: rgba(16, 185, 129, 0.2);
+                color: var(--main-color);
+            }
+            
+            .theme-dark .language-selector .dropdown-item.active {
+                background-color: rgba(16, 185, 129, 0.2);
+                color: var(--main-color);
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Start Header Area -->
+        <header class="main-header-area">
+            <!-- Start Navbar Area -->
+            <div class="navbar-area">
+                <div class="main-responsive-nav">
+                    <div class="container">
+                        <div class="main-responsive-menu">
+                            <div class="logo">
+                                <a href="/">
+                                    <img src="assets/images/zendp-logo.png" class="black-logo" alt="image">
+                                    <!-- <img src="assets/images/logo-2.png" class="white-logo" alt="image"> -->
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-navbar">
+                    <div class="container-fluid">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                            <a class="navbar-brand" href="/">
+                                <img src="assets/images/zendp-logo.png" class="black-logo" alt="image">
+                                <!-- <img src="assets/images/logo-2.png" class="white-logo" alt="image"> -->
+                            </a>
+                            
+                            <div class="navbar-list">
+                                <ul>
+                                    <li class="language-selector">
+                                        <div class="dropdown">
+                                            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <img src="assets/images/language-flags/US.png" alt="English">
+                                                <span>English</span>
+                                            </button>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item active" href="#">
+                                                    <img src="assets/images/language-flags/US.png" alt="English">
+                                                    English
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="assets/images/language-flags/DE.png" alt="German">
+                                                    Deutsch
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="assets/images/language-flags/FR.png" alt="French">
+                                                    Français
+                                                </a>
+                                                <a class="dropdown-item" href="#">
+                                                    <img src="assets/images/language-flags/ES.png" alt="Spanish">
+                                                    Español
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="/contact">Support</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a href="/" class="nav-link active">
+                                            Home 
+                                            <!-- <i class="ri-arrow-down-s-line"></i> -->
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="/about-us" class="nav-link">About Us</a>
+                                    </li>
+
+                                    <!-- <li class="nav-item">
+                                        <a href="/compare-pricing" class="nav-link">Compare Pricing</a>
+                                    </li> -->
+
+                        
+
+                                    <li class="nav-item">
+                                        <a href="/countries" class="nav-link">Countries</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="/faq" class="nav-link">FAQ</a>
+                                    </li>
+        
+                                    <li class="nav-item">
+                                        <a href="/contact" class="nav-link">Contact</a>
+                                    </li>
+                                </ul>
+
+                                <div class="others-options d-flex align-items-center">
+                                    <div class="option-item">
+                                        <a href="/coming-soon" class="default-btn">Download App</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="others-option-for-responsive">
+                    <div class="container">
+                        <div class="dot-menu">
+                            <div class="inner">
+                                <div class="circle circle-one"></div>
+                                <div class="circle circle-two"></div>
+                                <div class="circle circle-three"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="container">
+                            <div class="option-inner">
+                                <div class="others-options d-flex align-items-center">
+                                    <div class="option-item">
+                                        <a href="/coming-soon" class="default-btn">Download App</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+        </header>
+
+        <!-- Start Page Banner Area -->
+        <div class="page-banner-area">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="page-banner-content" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                            <h2>Privacy Policy</h2>
+        
+                            <ul>
+                                <li>
+                                    <a href="index">Home</a>
+                                </li>
+                                <li>Pages</li>
+                                <li>Privacy Policy</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="" >
+                            <img src="assets/images/page-banner/banner.png" alt="image">
+
+                            <div class="banner-shape">
+                                <!-- <img src="assets/images/page-banner/shape.png" alt="image"> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Page Banner Area -->
+        
+        <!-- Start Privacy Policy Area -->
+        <div class="privacy-policy-area ptb-100">
+        <div class="container">
+            <div class="privacy-policy-content">
+            <p><i>This Privacy Policy was last updated on September 5, 2025.</i></p>
+
+            <h3><span>1.</span> Who We Are</h3>
+            <p>
+                ZendP (“<b>ZendP</b>”, “<b>we</b>”, “<b>our</b>”, or “<b>us</b>”) provides international money transfer
+                and related services via our website <a href="https://www.zendp.com" target="_blank" rel="noopener">zendp.com</a> (the “<b>Site</b>”) and any
+                connected products (the “<b>Services</b>”). This Privacy Policy explains how we collect, use, disclose,
+                and protect personal information. If you have questions, contact us at
+                <a href="mailto:info@zendp.com">info@zendp.com</a>.
+            </p>
+
+            <h3><span>2.</span> Scope</h3>
+            <p>
+                This Policy applies to personal information we process when you visit the Site, create an account,
+                verify your identity, initiate or receive a transfer, use support, or interact with us in any other way.
+                It does not cover third-party sites and services that are not controlled by ZendP.
+            </p>
+
+            <h3><span>3.</span> Information We Collect</h3>
+            <p>We collect information in three ways: you provide it, we collect it automatically, and we receive it from third parties.</p>
+            <ul>
+                <li><b>Account &amp; Identity Data:</b> name, email, phone number, date of birth, nationality, address, government ID details (e.g., passport/ID number), selfies or images for identity verification (where applicable).</li>
+                <li><b>Transfer &amp; Transaction Data:</b> sender and recipient details, bank or wallet details, amounts, currencies, exchange rates, reference notes, charges, payment method and status, compliance flags.</li>
+                <li><b>Financial Data:</b> partial card details or account identifiers (tokenized where possible), issuing bank, and payment confirmations. We do not store full card numbers on our servers.</li>
+                <li><b>Compliance &amp; Risk Data:</b> sanctions screening results, watch-list checks, fraud/risk scoring, dispute information, correspondence necessary for AML/CFT obligations.</li>
+                <li><b>Support &amp; Communications:</b> messages, call/chat records, feedback, and survey responses.</li>
+                <li><b>Device &amp; Usage Data (automatic):</b> IP address, device/browser type, language, time zone, cookie identifiers, pages viewed, referring/exit pages, and clickstream data.</li>
+                <li><b>Cookies &amp; Similar Tech:</b> cookies, local storage, and pixels to keep you signed in, remember preferences, analyze traffic, and improve Services. See “Cookies” below.</li>
+                <li><b>Third-Party Sources:</b> identity verification providers, payment processors, banks, mobile money operators, fraud-prevention and sanctions screening partners, analytics providers, and public databases.</li>
+            </ul>
+
+            <h3><span>4.</span> How We Use Your Information</h3>
+            <ul>
+                <li><b>Provide Services:</b> create and manage accounts, process and deliver transfers, convert currency, and provide customer support.</li>
+                <li><b>Verify Identity &amp; Meet Legal Duties:</b> KYC/AML checks, sanctions screening, fraud monitoring, and record-keeping.</li>
+                <li><b>Improve &amp; Personalize:</b> analyze usage, enhance performance, fix issues, and tailor content.</li>
+                <li><b>Communicate:</b> send transaction confirmations, security alerts, policy updates, and service announcements.</li>
+                <li><b>Marketing (optional):</b> send product updates and offers if you opt in (you can unsubscribe at any time).</li>
+                <li><b>Protect:</b> enforce terms, prevent fraud and abuse, and protect our users and our Services.</li>
+            </ul>
+
+            <h3><span>5.</span> Legal Bases (EEA/UK)</h3>
+            <p>Where GDPR/UK GDPR applies, we rely on the following legal bases:</p>
+            <ul>
+                <li><b>Contract:</b> to provide and administer the Services you request.</li>
+                <li><b>Legal Obligation:</b> to conduct KYC/AML, sanctions screening, reporting, and other compliance.</li>
+                <li><b>Legitimate Interests:</b> to secure, improve, and promote our Services and prevent fraud (balanced with your rights).</li>
+                <li><b>Consent:</b> for optional activities like certain marketing or cookies where required.</li>
+            </ul>
+
+            <h3><span>6.</span> How We Share Information</h3>
+            <p>We do not sell personal information. We may share it as follows:</p>
+            <ul>
+                <li><b>Service Providers &amp; Partners:</b> cloud hosting, identity verification, sanctions and fraud screening, analytics, customer support, email delivery, and payment processing—under contracts that protect your data.</li>
+                <li><b>Financial Institutions &amp; Payout Networks:</b> banks, card networks, and mobile wallet operators to process and deliver your transfers.</li>
+                <li><b>Compliance &amp; Law Enforcement:</b> regulators, authorities, and law enforcement where required by law or to protect rights, users, and the public.</li>
+                <li><b>Business Transfers:</b> in a merger, acquisition, financing, or asset sale, subject to appropriate safeguards.</li>
+                <li><b>With Your Direction:</b> when you ask us to share with a third party.</li>
+            </ul>
+
+            <h3><span>7.</span> International Transfers</h3>
+            <p>
+                Because cross-border transfers are central to our Services, your information may be processed in countries
+                other than your own. Where required, we implement appropriate safeguards (e.g., standard contractual clauses)
+                to protect personal information transferred internationally.
+            </p>
+
+            <h3><span>8.</span> Data Retention</h3>
+            <p>
+                We keep personal information only as long as necessary for the purposes in this Policy, including providing
+                Services, complying with legal/AML record-keeping requirements, resolving disputes, and enforcing agreements.
+                Retention periods may vary by jurisdiction and regulation.
+            </p>
+
+            <h3><span>9.</span> Security</h3>
+            <p>
+                We use administrative, technical, and physical controls designed to safeguard personal information
+                (e.g., encryption in transit, access controls, monitoring). No system is 100% secure; please use unique,
+                strong passwords and keep your credentials confidential.
+            </p>
+
+            <h3><span>10.</span> Your Rights &amp; Choices</h3>
+            <p>Depending on your location, you may have rights to:</p>
+            <ul>
+                <li>Access, correct, or delete personal information;</li>
+                <li>Object to or restrict certain processing;</li>
+                <li>Port your data to another service;</li>
+                <li>Withdraw consent where processing relies on consent;</li>
+                <li>Lodge a complaint with your local data protection authority.</li>
+            </ul>
+            <p>
+                To exercise rights, contact <a href="mailto:info@zendp.com">info@zendp.com</a>. We may ask for additional
+                information to verify your identity and comply with applicable law (e.g., where legal obligations require us to retain certain records).
+            </p>
+
+            <h3><span>11.</span> Marketing Preferences</h3>
+            <p>
+                You can opt out of marketing emails by using the unsubscribe link in any email or by contacting us.
+                We will still send transactional or service messages (e.g., transfer confirmations, security alerts).
+            </p>
+
+            <h3><span>12.</span> Cookies</h3>
+            <p>
+                We use cookies and similar technologies to operate the Site, remember preferences, and analyze usage.
+                You can manage cookies via your browser settings. Some features may not function properly without certain cookies.
+            </p>
+
+            <h3><span>13.</span> Children’s Privacy</h3>
+            <p>
+                Our Services are not directed to children and we do not knowingly collect personal information from children.
+                If you believe a child has provided us personal information, contact us so we can take appropriate action.
+            </p>
+
+            <h3><span>14.</span> Automated Decision-Making</h3>
+            <p>
+                For fraud prevention, sanctions screening, and AML compliance, we may use automated systems to assess risk.
+                You can contact us to request human review where applicable under local law.
+            </p>
+
+            <h3><span>15.</span> Do Not Track</h3>
+            <p>
+                Some browsers offer “Do Not Track” signals. There is no uniform standard for responding to them, and
+                we do not currently respond to such signals. We continue to review industry and regulatory developments.
+            </p>
+
+            <h3><span>16.</span> Changes to This Policy</h3>
+            <p>
+                We may update this Policy from time to time. If we make material changes, we will notify you by posting an update
+                on the Site or by other appropriate means. The “last updated” date at the top indicates when the latest changes took effect.
+            </p>
+
+            <h3><span>17.</span> Contact Us</h3>
+            <p>
+                Questions about this Policy or our privacy practices? Contact us at
+                <a href="mailto:info@zendp.com">info@zendp.com</a>.
+            </p>
+            </div>
+        </div>
+        </div>
+        <!-- End Privacy Policy Area -->
+
+        <!-- Start Overview Area -->
+        <div class="overview-area ptb-100">
+            <div class="container">
+                <div class="overview-content" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                    <span>Connect Us</span>
+                    <h3>Sending International Business Payments or Sending Money To Family Overseas? At ZendP, we are your fast and simple solution</h3>
+
+                    <!-- <ul class="overview-btn-group">
+                        <li>
+                            <a href="help-center" class="default-btn">Business Account</a>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+
+            <div class="overview-shape">
+                <img src="assets/images/overview/shape-1.png" alt="image">
+            </div>
+            <div class="overview-shape-2">
+                <!-- <img src="assets/images/overview/shape-2.png" alt="image"> -->
+            </div>
+        </div>
+        <!-- End Overview Area -->
+
+        <!-- End Footer Area -->
+        <footer class="footer-area pt-100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500" data-aos-once="true">
+                            <div class="widget-logo">
+                                <img src="/assets/images/zendp-logo.png" class="black-logo" alt="image">
+                            </div>
+                            <p>To get exclusive updates and benefits.</p>
+                            
+                            <form class="newsletter-form" data-bs-toggle="validator">
+                                <input type="email" class="input-newsletter" placeholder="Enter email" name="EMAIL" required autocomplete="off">
+        
+                                <button type="submit" class="default-btn">Subscribe</button>
+                                <div id="validator-newsletter" class="form-result"></div>
+                            </form>
+
+                            <ul class="widget-social">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class="ri-facebook-fill"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/?lang=en" target="_blank">
+                                        <i class="ri-twitter-fill"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" target="_blank">
+                                        <i class="ri-instagram-line"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/signup" target="_blank">
+                                        <i class="ri-linkedin-line"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="60" data-aos-duration="600" data-aos-once="true">
+                            <h3>Company And Team</h3>
+
+                            <ul class="quick-links">
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/help-center">Help Center</a></li>
+                                <li><a href="/about-us">About Us</a></li>
+                                <!-- <li><a href="/help-center">Affiliates And Partnerships</a></li> -->
+                                <li><a href="/about-us"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget ps-5" data-aos="fade-up" data-aos-delay="70" data-aos-duration="700" data-aos-once="true">
+                            <h3>Resources</h3>
+
+                            <ul class="quick-links">
+                                <!-- <li><a href="/help-center">Security</a></li> -->
+                                <li><a href="/faq">FAQ's</a></li>
+                                <li><a href="/help-center">Community</a></li>
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget" data-aos="fade-up" data-aos-delay="80" data-aos-duration="800" data-aos-once="true">
+                            <h3>Contact Info</h3>
+
+                            <ul class="info-links">
+                                <!-- <li><span>Location:</span> 456 ZendP Avenue, New York, NY, USA</li> -->
+                                <li><span>Email:</span> <a href="mailto:info@zendp.com">info@zendp.com</a></li>
+                                <li><span>Phone:</span> <a href="tel:44789289524329">+1 800-555-0199	</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="copyright-area-content">
+                        <p>
+                            Copyright @ {year} ZendP All Rights Reserved by
+                            <a href="https://zendp.com/" target="_blank">
+                                zendp.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+
+        <!-- Start Go Top Area -->
+        <div class="go-top">
+            <i class="ri-arrow-up-s-line"></i>
+        </div>
+        <!-- End Go Top Area -->
+        
+        <!-- Links of JS files -->
+        <script is:inline src="/assets/js/jquery.min.js"></script>
+        <script is:inline src="/assets/js/bootstrap.bundle.min.js"></script>
+        <script is:inline src="/assets/js/jquery.meanmenu.js"></script> 
+        <script is:inline src="/assets/js/owl.carousel.min.js"></script>
+        <script is:inline src="/assets/js/jquery.appear.js"></script>
+        <script is:inline src="/assets/js/odometer.min.js"></script>
+        <script is:inline src="/assets/js/jquery.magnific-popup.min.js"></script>
+        <script is:inline src="/assets/js/TweenMax.min.js"></script>
+        <script is:inline src="/assets/js/ScrollMagic.min.js"></script>
+        <script is:inline src="/assets/js/aos.js"></script>
+		<script is:inline src="/assets/js/jquery.ajaxchimp.min.js"></script>
+		<script is:inline src="/assets/js/form-validator.min.js"></script>
+        <script is:inline src="/assets/js/contact-form-script.js"></script>
+        <script is:inline src="/assets/js/wow.min.js"></script>
+        <script is:inline src="/assets/js/main.js"></script>
+    </body>
+</html>
